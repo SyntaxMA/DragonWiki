@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home_fragment">
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.example.dragonwiki.Home_fragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home_fragment">
+        <action
+            android:id="@+id/action_home_fragment_to_login_fragment"
+            app:destination="@id/login_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="com.example.dragonwiki.Login_fragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login_fragment" >
+        <action
+            android:id="@+id/action_login_fragment_to_enter_fragment"
+            app:destination="@id/enter_fragment" />
+        <action
+            android:id="@+id/action_login_fragment_to_signin_fragment"
+            app:destination="@id/signin_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/enter_fragment"
+        android:name="com.example.dragonwiki.Enter_fragment"
+        android:label="fragment_enter"
+        tools:layout="@layout/fragment_enter" />
+    <fragment
+        android:id="@+id/signin_fragment"
+        android:name="com.example.dragonwiki.Signin_fragment"
+        android:label="fragment_signin"
+        tools:layout="@layout/fragment_signin" />
+
+</navigation>
