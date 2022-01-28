@@ -12,7 +12,6 @@
     android:paddingBottom="@dimen/fragment_vertical_margin"
     tools:context="Enter_fragment">
 
-
     <ImageView
         android:id="@+id/imagen"
         android:layout_width="wrap_content"
@@ -24,6 +23,20 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/Titlelogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:inputType="textPersonName"
+        android:text="Iniciar Sesión"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/username"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagen" />
 
     <EditText
         android:id="@+id/username"
@@ -59,7 +72,6 @@
         android:imeOptions="actionDone"
         android:inputType="textPassword"
         android:selectAllOnFocus="true"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/username" />
@@ -69,31 +81,45 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#CBFFFFFF"
-        android:backgroundTintMode="add"
-        android:enabled="false"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#80FFFFFF"
         android:text="Iniciar Sesion"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.85"
+        app:strokeColor="#000000"
+        app:strokeWidth="1dp"
         tools:text="Iniciar Sesion" />
 
     <TextView
-        android:id="@+id/Titlelogin"
+        android:id="@+id/notaccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:ems="10"
-        android:textSize="32sp"
-        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
         android:inputType="textPersonName"
-        android:text="Iniciar Sesión"
-        app:layout_constraintBottom_toTopOf="@id/username"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagen" />
+        android:text="¿No tienes cuenta?"
+        android:textColor="#DB9E01"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/signaccount"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <TextView
+        android:id="@+id/signaccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:inputType="textPersonName"
+        android:text="Inicia sesion aqui"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/notaccount" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

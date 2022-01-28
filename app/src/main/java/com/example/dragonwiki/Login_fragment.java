@@ -17,6 +17,7 @@ public class Login_fragment extends Fragment {
 
     Button botonlogin;
     Button botonsignin;
+    Button botongoogle;
 
     NavController navController;
 
@@ -49,6 +50,15 @@ public class Login_fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 navController.navigate(R.id.action_login_fragment_to_signin_fragment);            }
+        });
+
+        /* BOTÓN PARA IR AL LOGIN DE GOOGLE */
+
+        botongoogle = view.findViewById(R.id.googlebutton);
+        botongoogle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_login_fragment_to_google_Fragment);            }
         });
     }
 }

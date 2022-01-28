@@ -24,6 +24,21 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/Titlelogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:inputType="textPersonName"
+        android:text="Crear Cuenta"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/username"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagen" />
+
     <EditText
         android:id="@+id/username"
         android:layout_width="0dp"
@@ -86,30 +101,45 @@
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#CBFFFFFF"
-        android:backgroundTintMode="add"
-        android:enabled="false"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#80FFFFFF"
         android:text="Crear Cuenta"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.85"
+        app:strokeColor="#000000"
+        app:strokeWidth="1dp"
         tools:text="Crear Cuenta" />
 
     <TextView
-        android:id="@+id/Titlelogin"
+        android:id="@+id/haveaccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:ems="10"
-        android:textSize="32sp"
-        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
         android:inputType="textPersonName"
-        android:text="Crear Cuenta"
-        app:layout_constraintBottom_toTopOf="@id/username"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagen" />
+        android:text="¿Ya tienes cuenta?"
+        android:textColor="#DB9E01"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/clickaccount"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <TextView
+        android:id="@+id/clickaccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:inputType="textPersonName"
+        android:text="Registrate aqui"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/haveaccount" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

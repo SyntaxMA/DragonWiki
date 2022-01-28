@@ -25,16 +25,32 @@
         <action
             android:id="@+id/action_login_fragment_to_signin_fragment"
             app:destination="@id/signin_fragment" />
+        <action
+            android:id="@+id/action_login_fragment_to_google_Fragment"
+            app:destination="@id/google_Fragment" />
     </fragment>
     <fragment
         android:id="@+id/enter_fragment"
         android:name="com.example.dragonwiki.Enter_fragment"
         android:label="fragment_enter"
-        tools:layout="@layout/fragment_enter" />
+        tools:layout="@layout/fragment_enter" >
+        <action
+            android:id="@+id/action_enter_fragment_to_signin_fragment"
+            app:destination="@id/signin_fragment" />
+    </fragment>
     <fragment
         android:id="@+id/signin_fragment"
         android:name="com.example.dragonwiki.Signin_fragment"
         android:label="fragment_signin"
-        tools:layout="@layout/fragment_signin" />
+        tools:layout="@layout/fragment_signin" >
+        <action
+            android:id="@+id/action_signin_fragment_to_enter_fragment"
+            app:destination="@id/enter_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/google_Fragment"
+        android:name="com.example.dragonwiki.Google_Fragment"
+        android:label="fragment_google"
+        tools:layout="@layout/fragment_google" />
 
 </navigation>

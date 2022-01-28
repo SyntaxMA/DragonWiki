@@ -6,6 +6,10 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/kamehouse"
+    android:paddingLeft="@dimen/fragment_horizontal_margin"
+    android:paddingTop="@dimen/fragment_vertical_margin"
+    android:paddingRight="@dimen/fragment_horizontal_margin"
+    android:paddingBottom="@dimen/fragment_vertical_margin"
     tools:context=".Login_fragment">
 
     <ImageView
@@ -14,46 +18,51 @@
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:src="@drawable/logoc"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/signinbutton"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/signinbutton"
         android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:text="Crea una cuenta"
+        android:layout_height="75dp"
         android:backgroundTint="#80FFFFFF"
+        android:text="Crea una cuenta"
         android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/googlebutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imagen"/>
+        app:layout_constraintTop_toBottomOf="@id/imagen"
+        app:strokeColor="#000000"
+        app:strokeWidth="1dp" />
 
     <Button
         android:id="@+id/googlebutton"
         android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:text="Iniciar sesion con Google"
+        android:layout_height="75dp"
         android:backgroundTint="#80FFFFFF"
+        android:text="Iniciar sesion con Google"
         android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/loginbutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signinbutton" />
+        app:layout_constraintTop_toBottomOf="@+id/signinbutton"
+        app:strokeColor="#000000"
+        app:strokeWidth="1dp" />
 
     <Button
         android:id="@+id/loginbutton"
         android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:text="Iniciar sesion"
+        android:layout_height="75dp"
         android:backgroundTint="#80FFFFFF"
+        android:text="Iniciar sesion"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/googlebutton" />
+        app:layout_constraintTop_toBottomOf="@+id/googlebutton"
+        app:strokeColor="#000000"
+        app:strokeWidth="1dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
