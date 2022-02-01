@@ -37,6 +37,9 @@
         <action
             android:id="@+id/action_enter_fragment_to_signin_fragment"
             app:destination="@id/signin_fragment" />
+        <action
+            android:id="@+id/action_enter_fragment_to_menu_fragment"
+            app:destination="@id/menu_fragment" />
     </fragment>
     <fragment
         android:id="@+id/signin_fragment"
@@ -46,11 +49,23 @@
         <action
             android:id="@+id/action_signin_fragment_to_enter_fragment"
             app:destination="@id/enter_fragment" />
+        <action
+            android:id="@+id/action_signin_fragment_to_menu_fragment"
+            app:destination="@id/menu_fragment" />
     </fragment>
     <fragment
         android:id="@+id/google_Fragment"
         android:name="com.example.dragonwiki.Google_Fragment"
         android:label="fragment_google"
-        tools:layout="@layout/fragment_google" />
+        tools:layout="@layout/fragment_google" >
+        <action
+            android:id="@+id/action_google_Fragment_to_menu_fragment"
+            app:destination="@id/menu_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu_fragment"
+        android:name="com.example.dragonwiki.Menu_fragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" />
 
 </navigation>
