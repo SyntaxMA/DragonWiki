@@ -16,8 +16,8 @@ import android.widget.TextView;
 
 public class Enter_fragment extends Fragment{
 
+    TextView enlace;
     TextView enlace2;
-
     NavController navController;
 
     @Override
@@ -39,6 +39,14 @@ public class Enter_fragment extends Fragment{
             @Override
             public void onClick(View view) {
                 navController.navigate(R.id.action_enter_fragment_to_signin_fragment);
+            }
+        });
+
+        enlace = view.findViewById(R.id.login);
+        enlace.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_enter_fragment_to_menu_fragment);
             }
         });
     }

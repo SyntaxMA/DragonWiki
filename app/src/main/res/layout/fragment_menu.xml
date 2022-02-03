@@ -19,16 +19,30 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/fotocapsula"
         android:layout_width="260dp"
-        android:layout_height="450dp"
+        android:layout_height="270dp"
         android:src="@drawable/fondocapsula"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.51" />
 
 
+    <ImageView
+        android:id="@+id/fondocapsula"
+        android:layout_width="328dp"
+        android:layout_height="270dp"
+        android:src="@drawable/capfinal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.51"
+        tools:visibility="visible" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -38,5 +52,52 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/closecapsula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="#C0CFC7"
+        android:textColor="#000000"
+        android:text="Close"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        app:strokeColor="#000000"
+        app:strokeWidth="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fondocapsula"
+        app:layout_constraintEnd_toEndOf="@+id/fondocapsula"
+        app:layout_constraintStart_toStartOf="@+id/fondocapsula" />
+
+    <Button
+        android:id="@+id/Buttoncartas"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:backgroundTint="#1F57C8"
+        android:textColor="#000000"
+        android:text="Mazos"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        app:strokeColor="#000000"
+        app:strokeWidth="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fondocapsula"
+        app:layout_constraintStart_toStartOf="@+id/fondocapsula"
+        app:layout_constraintTop_toTopOf="@+id/fondocapsula" />
+
+    <Button
+        android:id="@+id/Buttononline"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#B5872A"
+        android:textColor="#000000"
+        android:text="Online"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        app:strokeColor="#000000"
+        app:strokeWidth="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fondocapsula"
+        app:layout_constraintEnd_toEndOf="@+id/fondocapsula"
+        app:layout_constraintTop_toTopOf="@+id/fondocapsula" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

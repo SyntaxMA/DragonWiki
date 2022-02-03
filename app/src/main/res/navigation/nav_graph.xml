@@ -66,6 +66,23 @@
         android:id="@+id/menu_fragment"
         android:name="com.example.dragonwiki.Menu_fragment"
         android:label="fragment_menu"
-        tools:layout="@layout/fragment_menu" />
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menu_fragment_to_cartas_fragment"
+            app:destination="@id/cartas_fragment" />
+        <action
+            android:id="@+id/action_menu_fragment_to_online_fragment"
+            app:destination="@id/online_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartas_fragment"
+        android:name="com.example.dragonwiki.Cartas_fragment"
+        android:label="fragment_cartas"
+        tools:layout="@layout/fragment_mazos" />
+    <fragment
+        android:id="@+id/online_fragment"
+        android:name="com.example.dragonwiki.Online_fragment"
+        android:label="fragment_online"
+        tools:layout="@layout/fragment_online" />
 
 </navigation>
