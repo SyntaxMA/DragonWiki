@@ -8,8 +8,8 @@
     tools:context=".Cartas_fragment">
 
     <include
-        layout="@layout/menuinferior"
-        android:id="@+id/menuinferior"
+        layout="@layout/fragment_menu_inferior"
+        android:id="@+id/fragment_menu_inferior"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

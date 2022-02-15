@@ -84,5 +84,14 @@
         android:name="com.example.dragonwiki.Online_fragment"
         android:label="fragment_online"
         tools:layout="@layout/fragment_online" />
+    <fragment
+        android:id="@+id/menuInferior_fragment"
+        android:name="com.example.dragonwiki.MenuInferior_fragment"
+        android:label="fragment_menu_inferior"
+        tools:layout="@layout/fragment_menu_inferior" >
+        <action
+            android:id="@+id/action_menuInferior_fragment_to_menu_fragment"
+            app:destination="@id/menu_fragment" />
+    </fragment>
 
 </navigation>

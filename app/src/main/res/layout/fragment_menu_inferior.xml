@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/inferior" />
+
+    <ImageView
+        android:id="@+id/radar1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/radar2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/radarlimpio" />
+
+
+
+    <ImageView
+        android:id="@+id/radar2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/radar3"
+        app:layout_constraintStart_toEndOf="@id/radar1"
+        app:srcCompat="@drawable/radarlimpio" />
+
+    <ImageView
+        android:id="@+id/radar3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/radar4"
+        app:layout_constraintStart_toEndOf="@id/radar2"
+        app:srcCompat="@drawable/radarlimpio" />
+
+    <ImageView
+        android:id="@+id/radar4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/radar5"
+        app:layout_constraintStart_toEndOf="@id/radar3"
+        app:srcCompat="@drawable/radarlimpio" />
+
+    <ImageView
+        android:id="@+id/radar5"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/radar4"
+        app:srcCompat="@drawable/radarlimpio" />
+
+    <TextView
+        android:id="@+id/cartastext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cartas"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/radar1"
+        app:layout_constraintEnd_toEndOf="@+id/radar1"
+        app:layout_constraintStart_toStartOf="@+id/radar1"
+        app:layout_constraintTop_toTopOf="@+id/radar1" />
+
+    <TextView
+        android:id="@+id/noticiastext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Noticias"
+        android:textStyle="bold"
+        android:textColor="#000000"
+
+        app:layout_constraintBottom_toBottomOf="@+id/radar2"
+        app:layout_constraintEnd_toEndOf="@+id/radar2"
+        app:layout_constraintStart_toStartOf="@+id/radar2"
+        app:layout_constraintTop_toTopOf="@+id/radar2" />
+
+    <TextView
+        android:id="@+id/iniciotext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inicio"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/radar3"
+        app:layout_constraintEnd_toEndOf="@+id/radar3"
+        app:layout_constraintStart_toStartOf="@+id/radar3"
+        app:layout_constraintTop_toTopOf="@+id/radar3" />
+
+    <TextView
+        android:id="@+id/summonstext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Summons"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/radar4"
+        app:layout_constraintEnd_toEndOf="@+id/radar4"
+        app:layout_constraintStart_toStartOf="@+id/radar4"
+        app:layout_constraintTop_toTopOf="@+id/radar4" />
+
+    <TextView
+        android:id="@+id/guiatext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guias"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/radar5"
+        app:layout_constraintEnd_toEndOf="@+id/radar5"
+        app:layout_constraintStart_toStartOf="@+id/radar5"
+        app:layout_constraintTop_toTopOf="@+id/radar5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
