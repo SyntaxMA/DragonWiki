@@ -7,12 +7,6 @@
     android:background="@drawable/cartas"
     tools:context=".Online_fragment">
 
-    <include
-        layout="@layout/fragment_menu_inferior"
-        android:id="@+id/fragment_menu_inferior"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
     <TextView
         android:id="@+id/Ejemplo"
         android:layout_width="wrap_content"
@@ -25,5 +19,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <include
+        layout="@layout/fragment_noticias"
+        android:id="@+id/fragment_noticias"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include
+        layout="@layout/fragment_menu_inferior"
+        android:id="@+id/fragment_menu_inferior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

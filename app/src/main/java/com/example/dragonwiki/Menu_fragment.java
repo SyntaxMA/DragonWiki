@@ -21,6 +21,10 @@ public class Menu_fragment extends Fragment {
 
     Button enlace;
 
+    ImageView noticias;
+    Button cierranotis;
+
+    View notifrag;
     ImageView visible;
     ImageView fondoverde;
     Button close;
@@ -51,7 +55,7 @@ public class Menu_fragment extends Fragment {
         fondoverde = view.findViewById(R.id.fondocapsula);
         cartas = view.findViewById(R.id.Buttoncartas);
         online = view.findViewById(R.id.Buttononline);
-
+        notifrag = view.findViewById(R.id.fragment_noticias);
 
         fondoverde.setVisibility(View.INVISIBLE);
         close.setVisibility(View.INVISIBLE);
@@ -95,6 +99,29 @@ public class Menu_fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 navController.navigate(R.id.action_menu_fragment_to_online_fragment);
+            }
+        });
+
+        noticias = view.findViewById(R.id.radar2);
+        noticias.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                notifrag.setVisibility(View.VISIBLE);
+                fondoverde.setVisibility(View.INVISIBLE);
+                close.setVisibility(View.INVISIBLE);
+                cartas.setVisibility(View.INVISIBLE);
+                online.setVisibility(View.INVISIBLE);
+                visible.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        cierranotis = view.findViewById(R.id.notisclose);
+        cierranotis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                notifrag.setVisibility(View.INVISIBLE);
+                visible.setVisibility(View.VISIBLE);
+
             }
         });
     }

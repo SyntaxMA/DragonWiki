@@ -73,25 +73,46 @@
         <action
             android:id="@+id/action_menu_fragment_to_online_fragment"
             app:destination="@id/online_fragment" />
+        <action
+            android:id="@+id/action_menu_fragment_to_noticias_fragment"
+            app:destination="@id/noticias_fragment" />
+        <action
+            android:id="@+id/action_menu_fragment_self"
+            app:destination="@id/menu_fragment" />
     </fragment>
     <fragment
         android:id="@+id/cartas_fragment"
         android:name="com.example.dragonwiki.Cartas_fragment"
         android:label="fragment_cartas"
-        tools:layout="@layout/fragment_mazos" />
+        tools:layout="@layout/fragment_mazos" >
+        <action
+            android:id="@+id/action_cartas_fragment_to_menu_fragment"
+            app:destination="@id/menu_fragment" />
+        <action
+            android:id="@+id/action_cartas_fragment_to_noticias_fragment"
+            app:destination="@id/noticias_fragment" />
+    </fragment>
     <fragment
         android:id="@+id/online_fragment"
         android:name="com.example.dragonwiki.Online_fragment"
         android:label="fragment_online"
-        tools:layout="@layout/fragment_online" />
+        tools:layout="@layout/fragment_online" >
+        <action
+            android:id="@+id/action_online_fragment_to_menu_fragment"
+            app:destination="@id/menu_fragment" />
+        <action
+            android:id="@+id/action_online_fragment_to_noticias_fragment"
+            app:destination="@id/noticias_fragment" />
+    </fragment>
     <fragment
         android:id="@+id/menuInferior_fragment"
         android:name="com.example.dragonwiki.MenuInferior_fragment"
         android:label="fragment_menu_inferior"
-        tools:layout="@layout/fragment_menu_inferior" >
-        <action
-            android:id="@+id/action_menuInferior_fragment_to_menu_fragment"
-            app:destination="@id/menu_fragment" />
-    </fragment>
+        tools:layout="@layout/fragment_menu_inferior" />
+    <fragment
+        android:id="@+id/noticias_fragment"
+        android:name="com.example.dragonwiki.Noticias_fragment"
+        android:label="fragment_noticias"
+        tools:layout="@layout/fragment_noticias" />
 
 </navigation>
