@@ -79,6 +79,9 @@
         <action
             android:id="@+id/action_menu_fragment_self"
             app:destination="@id/menu_fragment" />
+        <action
+            android:id="@+id/action_menu_fragment_to_summons_fragment"
+            app:destination="@id/summons_fragment" />
     </fragment>
     <fragment
         android:id="@+id/cartas_fragment"
@@ -91,6 +94,9 @@
         <action
             android:id="@+id/action_cartas_fragment_to_noticias_fragment"
             app:destination="@id/noticias_fragment" />
+        <action
+            android:id="@+id/action_cartas_fragment_to_summons_fragment"
+            app:destination="@id/summons_fragment" />
     </fragment>
     <fragment
         android:id="@+id/online_fragment"
@@ -103,6 +109,9 @@
         <action
             android:id="@+id/action_online_fragment_to_noticias_fragment"
             app:destination="@id/noticias_fragment" />
+        <action
+            android:id="@+id/action_online_fragment_to_summons_fragment"
+            app:destination="@id/summons_fragment" />
     </fragment>
     <fragment
         android:id="@+id/menuInferior_fragment"
@@ -113,6 +122,19 @@
         android:id="@+id/noticias_fragment"
         android:name="com.example.dragonwiki.Noticias_fragment"
         android:label="fragment_noticias"
-        tools:layout="@layout/fragment_noticias" />
+        tools:layout="@layout/fragment_noticias" >
+        <action
+            android:id="@+id/action_noticias_fragment_to_summons_fragment"
+            app:destination="@id/summons_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/summons_fragment"
+        android:name="com.example.dragonwiki.Summons_fragment"
+        android:label="fragment_summons"
+        tools:layout="@layout/fragment_summons" >
+        <action
+            android:id="@+id/action_summons_fragment_to_noticias_fragment"
+            app:destination="@id/noticias_fragment" />
+    </fragment>
 
 </navigation>

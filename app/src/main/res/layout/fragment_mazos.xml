@@ -7,11 +7,6 @@
     android:background="@drawable/cartas"
     tools:context=".Cartas_fragment">
 
-    <include
-        layout="@layout/fragment_menu_inferior"
-        android:id="@+id/fragment_menu_inferior"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
     <TextView
         android:id="@+id/Ejemplo"
@@ -31,6 +26,12 @@
         android:id="@+id/fragment_noticias"
         android:visibility="invisible"
         tools:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include
+        layout="@layout/fragment_menu_inferior"
+        android:id="@+id/fragment_menu_inferior"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

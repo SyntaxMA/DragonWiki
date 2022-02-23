@@ -5,32 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#B3000000"
-    tools:context=".Noticias_fragment">
+    tools:context=".Summons_fragment">
 
     <Button
-        android:id="@+id/notisclose"
+        android:id="@+id/summonsclose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="14dp"
         android:text="Close"
-        app:layout_constraintBottom_toBottomOf="@+id/marconotis"
+        app:layout_constraintBottom_toBottomOf="@+id/marcosummons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/fondonotis"
+        android:id="@+id/fondosummons"
         android:layout_width="326dp"
         android:layout_height="486dp"
         android:scaleX="1.2"
         android:scaleY="1"
         android:src="@drawable/fondoraya"
-        app:layout_constraintBottom_toBottomOf="@+id/marconotis"
-        app:layout_constraintEnd_toEndOf="@+id/marconotis"
-        app:layout_constraintStart_toStartOf="@+id/marconotis"
-        app:layout_constraintTop_toTopOf="@+id/marconotis" />
+        app:layout_constraintBottom_toBottomOf="@+id/marcosummons"
+        app:layout_constraintEnd_toEndOf="@+id/marcosummons"
+        app:layout_constraintStart_toStartOf="@+id/marcosummons"
+        app:layout_constraintTop_toTopOf="@+id/marcosummons" />
+
 
     <ImageView
-        android:id="@+id/marconotis"
+        android:id="@+id/marcosummons"
         android:layout_width="345dp"
         android:layout_height="555dp"
         android:layout_marginBottom="80dp"

@@ -11,12 +11,18 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class Cartas_fragment extends Fragment {
+
     NavController navController;
 
+    ImageView noticias;
+    Button cierranotis;
+
     ImageView inicio;
+    View notifrag;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -38,11 +44,29 @@ public class Cartas_fragment extends Fragment {
 
         navController = Navigation.findNavController(view);
 
+        notifrag = view.findViewById(R.id.fragment_noticias);
+
         inicio = view.findViewById(R.id.radar3);
         inicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 navController.navigate(R.id.action_cartas_fragment_to_menu_fragment);
+            }
+        });
+
+        noticias = view.findViewById(R.id.radar2);
+        noticias.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                notifrag.setVisibility(View.VISIBLE);
+            }
+        });
+
+        cierranotis = view.findViewById(R.id.notisclose);
+        cierranotis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                notifrag.setVisibility(View.INVISIBLE);
             }
         });
 
