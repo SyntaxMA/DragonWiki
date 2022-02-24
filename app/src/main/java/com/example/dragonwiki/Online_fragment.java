@@ -18,12 +18,24 @@ import android.widget.ImageView;
 public class Online_fragment extends Fragment {
 
     NavController navController;
+    ImageView inicio;
+
+    /* LOS FRAGMENTS DEL MENU INFERIOR */
+
+    View summonfrag;
+    View notifrag;
+
+    /* DIVIDIDOS EN SUS BOTONES RESPECTIVOS */
+
+    // LOS DE NOTICIAS
 
     ImageView noticias;
     Button cierranotis;
 
-    ImageView inicio;
-    View notifrag;
+    // LOS DE SUMMONS
+
+    ImageView summons;
+    Button cierrasummons;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,6 +58,7 @@ public class Online_fragment extends Fragment {
         navController = Navigation.findNavController(view);
 
         notifrag = view.findViewById(R.id.fragment_noticias);
+        summonfrag = view.findViewById(R.id.fragment_summons);
 
         inicio = view.findViewById(R.id.radar3);
         inicio.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +73,8 @@ public class Online_fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 notifrag.setVisibility(View.VISIBLE);
+                summonfrag.setVisibility(View.INVISIBLE);
+
             }
         });
 
@@ -68,6 +83,26 @@ public class Online_fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 notifrag.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        /* MOSTRAR Y OCULTAR EL SUMMONS */
+
+        summons = view.findViewById(R.id.radar4);
+        summons.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                summonfrag.setVisibility(View.VISIBLE);
+                notifrag.setVisibility(View.INVISIBLE);
+
+            }
+        });
+
+        cierrasummons = view.findViewById(R.id.summonsclose);
+        cierrasummons.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                summonfrag.setVisibility(View.INVISIBLE);
             }
         });
 
