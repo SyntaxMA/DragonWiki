@@ -82,6 +82,12 @@
         <action
             android:id="@+id/action_menu_fragment_to_summons_fragment"
             app:destination="@id/summons_fragment" />
+        <action
+            android:id="@+id/action_menu_fragment_to_guias_fragment"
+            app:destination="@id/guias_fragment" />
+        <action
+            android:id="@+id/action_menu_fragment_to_personajes_fragment"
+            app:destination="@id/personajes_fragment" />
     </fragment>
     <fragment
         android:id="@+id/cartas_fragment"
@@ -97,6 +103,12 @@
         <action
             android:id="@+id/action_cartas_fragment_to_summons_fragment"
             app:destination="@id/summons_fragment" />
+        <action
+            android:id="@+id/action_cartas_fragment_to_guias_fragment"
+            app:destination="@id/guias_fragment" />
+        <action
+            android:id="@+id/action_cartas_fragment_to_personajes_fragment"
+            app:destination="@id/personajes_fragment" />
     </fragment>
     <fragment
         android:id="@+id/online_fragment"
@@ -112,6 +124,12 @@
         <action
             android:id="@+id/action_online_fragment_to_summons_fragment"
             app:destination="@id/summons_fragment" />
+        <action
+            android:id="@+id/action_online_fragment_to_guias_fragment"
+            app:destination="@id/guias_fragment" />
+        <action
+            android:id="@+id/action_online_fragment_to_personajes_fragment"
+            app:destination="@id/personajes_fragment" />
     </fragment>
     <fragment
         android:id="@+id/menuInferior_fragment"
@@ -134,6 +152,42 @@
         tools:layout="@layout/fragment_summons" >
         <action
             android:id="@+id/action_summons_fragment_to_noticias_fragment"
+            app:destination="@id/noticias_fragment" />
+        <action
+            android:id="@+id/action_summons_fragment_to_guias_fragment"
+            app:destination="@id/guias_fragment" />
+        <action
+            android:id="@+id/action_summons_fragment_to_personajes_fragment"
+            app:destination="@id/personajes_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/guias_fragment"
+        android:name="com.example.dragonwiki.Guias_fragment"
+        android:label="fragment_guias"
+        tools:layout="@layout/fragment_guias" >
+        <action
+            android:id="@+id/action_guias_fragment_to_personajes_fragment"
+            app:destination="@id/personajes_fragment" />
+        <action
+            android:id="@+id/action_guias_fragment_to_summons_fragment"
+            app:destination="@id/summons_fragment" />
+        <action
+            android:id="@+id/action_guias_fragment_to_noticias_fragment"
+            app:destination="@id/noticias_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personajes_fragment"
+        android:name="com.example.dragonwiki.Personajes_fragment"
+        android:label="fragment_personajes"
+        tools:layout="@layout/fragment_personajes" >
+        <action
+            android:id="@+id/action_personajes_fragment_to_guias_fragment"
+            app:destination="@id/guias_fragment" />
+        <action
+            android:id="@+id/action_personajes_fragment_to_summons_fragment"
+            app:destination="@id/summons_fragment" />
+        <action
+            android:id="@+id/action_personajes_fragment_to_noticias_fragment"
             app:destination="@id/noticias_fragment" />
     </fragment>
 
