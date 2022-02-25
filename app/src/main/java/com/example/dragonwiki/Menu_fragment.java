@@ -40,6 +40,14 @@ public class Menu_fragment extends Fragment {
     ImageView summons;
     Button cierrasummons;
 
+    // LOS DE GUIA
+
+    ImageView guia;
+
+    // LOS DE CARTAS
+
+    ImageView personajes;
+
     /* COSAS DE LA CAPSULA DEL MENU */
 
     ImageView visible;
@@ -84,6 +92,7 @@ public class Menu_fragment extends Fragment {
         summonfrag = view.findViewById(R.id.fragment_summons);
 
 
+
         visible.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -125,21 +134,14 @@ public class Menu_fragment extends Fragment {
             }
         });
 
-        /* OCULTAR LOS OVERLAYS */
 
-        inicio = view.findViewById(R.id.radar3);
-        inicio.setOnClickListener(new View.OnClickListener() {
+        personajes = view.findViewById(R.id.radar1);
+        personajes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                notifrag.setVisibility(View.INVISIBLE);
-                summonfrag.setVisibility(View.INVISIBLE);
-
-                visible.setVisibility(View.VISIBLE);
-
+                navController.navigate(R.id.action_menu_fragment_to_personajes_fragment);
             }
         });
-
-
 
         /* MOSTRAR Y OCULTAR LAS NOTICIAS */
 
@@ -157,12 +159,24 @@ public class Menu_fragment extends Fragment {
                 visible.setVisibility(View.INVISIBLE);
             }
         });
-
         cierranotis = view.findViewById(R.id.notisclose);
         cierranotis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 notifrag.setVisibility(View.INVISIBLE);
+                visible.setVisibility(View.VISIBLE);
+
+            }
+        });
+
+
+        inicio = view.findViewById(R.id.radar3);
+        inicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                notifrag.setVisibility(View.INVISIBLE);
+                summonfrag.setVisibility(View.INVISIBLE);
+
                 visible.setVisibility(View.VISIBLE);
 
             }
@@ -184,7 +198,6 @@ public class Menu_fragment extends Fragment {
                 visible.setVisibility(View.INVISIBLE);
             }
         });
-
         cierrasummons = view.findViewById(R.id.summonsclose);
         cierrasummons.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -194,5 +207,15 @@ public class Menu_fragment extends Fragment {
 
             }
         });
+
+
+        guia = view.findViewById(R.id.radar5);
+        guia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_menu_fragment_to_guias_fragment);
+            }
+        });
+
     }
 }

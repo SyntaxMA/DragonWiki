@@ -2,63 +2,126 @@ package com.example.dragonwiki;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Personajes_fragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class Personajes_fragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    NavController navController;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    ImageView inicio;
+    ImageView guias;
 
-    public Personajes_fragment() {
-        // Required empty public constructor
-    }
+    /* LOS FRAGMENTS DEL MENU INFERIOR */
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Personajes_fragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static Personajes_fragment newInstance(String param1, String param2) {
-        Personajes_fragment fragment = new Personajes_fragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    View summonfrag;
+    View notifrag;
+
+    /* DIVIDIDOS EN SUS BOTONES RESPECTIVOS */
+
+    // LOS DE NOTICIAS
+
+    ImageView noticias;
+    Button cierranotis;
+
+    // LOS DE SUMMONS
+
+    ImageView summons;
+    Button cierrasummons;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_personajes, container, false);
+    }
+
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        navController = Navigation.findNavController(view);
+
+        notifrag = view.findViewById(R.id.fragment_noticias);
+        summonfrag = view.findViewById(R.id.fragment_summons);
+
+
+        /* MOSTRAR Y OCULTAR LAS NOTICIAS */
+
+        noticias = view.findViewById(R.id.radar2);
+        noticias.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                notifrag.setVisibility(View.VISIBLE);
+                summonfrag.setVisibility(View.INVISIBLE);
+
+            }
+        });
+
+        cierranotis = view.findViewById(R.id.notisclose);
+        cierranotis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                notifrag.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        /* IR AL MENU PRINCIPAL */
+
+        inicio = view.findViewById(R.id.radar3);
+        inicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_personajes_fragment_to_menu_fragment);
+            }
+        });
+
+        /* MOSTRAR Y OCULTAR EL SUMMONS */
+
+        summons = view.findViewById(R.id.radar4);
+        summons.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                summonfrag.setVisibility(View.VISIBLE);
+                notifrag.setVisibility(View.INVISIBLE);
+
+            }
+        });
+
+        cierrasummons = view.findViewById(R.id.summonsclose);
+        cierrasummons.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                summonfrag.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        /* IR AL MENU GUIAS */
+
+        guias = view.findViewById(R.id.radar5);
+        guias.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_personajes_fragment_to_guias_fragment);
+            }
+        });
+
     }
 }
