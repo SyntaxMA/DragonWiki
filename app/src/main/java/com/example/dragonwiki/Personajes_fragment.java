@@ -18,25 +18,25 @@ public class Personajes_fragment extends Fragment {
 
     NavController navController;
 
-    ImageView inicio;
-    ImageView guias;
-
     /* LOS FRAGMENTS DEL MENU INFERIOR */
-
     View summonfrag;
     View notifrag;
 
     /* DIVIDIDOS EN SUS BOTONES RESPECTIVOS */
 
-    // LOS DE NOTICIAS
+    // LOS DE  INICIO
+    ImageView inicio;
 
+    // LOS DE NOTICIAS
     ImageView noticias;
     Button cierranotis;
 
     // LOS DE SUMMONS
-
     ImageView summons;
     Button cierrasummons;
+
+    // LOS DE GUIA
+    ImageView guias;
 
 
     @Override

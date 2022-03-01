@@ -17,24 +17,26 @@ import android.widget.ImageView;
 public class Guias_fragment extends Fragment {
 
     NavController navController;
-    ImageView inicio;
 
     /* LOS FRAGMENTS DEL MENU INFERIOR */
-
     View summonfrag;
     View notifrag;
 
     /* DIVIDIDOS EN SUS BOTONES RESPECTIVOS */
 
-    // LOS DE NOTICIAS
+    // LOS DE  INICIO
+    ImageView inicio;
 
+    // LOS DE NOTICIAS
     ImageView noticias;
     Button cierranotis;
 
     // LOS DE SUMMONS
-
     ImageView summons;
     Button cierrasummons;
+
+    // LOS DE PERSONAJES;
+    ImageView personajes;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -59,13 +61,18 @@ public class Guias_fragment extends Fragment {
         notifrag = view.findViewById(R.id.fragment_noticias);
         summonfrag = view.findViewById(R.id.fragment_summons);
 
-        inicio = view.findViewById(R.id.radar3);
-        inicio.setOnClickListener(new View.OnClickListener() {
+
+        /* IR AL MENU PERSONAJES */
+
+        personajes = view.findViewById(R.id.radar1);
+        personajes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                navController.navigate(R.id.action_guias_fragment_to_menu_fragment);
+                navController.navigate(R.id.action_guias_fragment_to_personajes_fragment);
             }
         });
+
+        /* MOSTRAR Y OCULTAR LAS NOTICIAS */
 
         noticias = view.findViewById(R.id.radar2);
         noticias.setOnClickListener(new View.OnClickListener() {
@@ -82,6 +89,16 @@ public class Guias_fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 notifrag.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        /* IR AL MENU PRINCIPAL */
+
+        inicio = view.findViewById(R.id.radar3);
+        inicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_guias_fragment_to_menu_fragment);
             }
         });
 

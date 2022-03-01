@@ -30,23 +30,19 @@ public class Menu_fragment extends Fragment {
 
     /* DIVIDIDOS EN SUS BOTONES RESPECTIVOS */
 
-    // LOS DE NOTICIAS
+    // 1. LOS DE CARTAS
+    ImageView personajes;
 
+    // 2. LOS DE NOTICIAS
     ImageView noticias;
     Button cierranotis;
 
-    // LOS DE SUMMONS
-
+    // 4. LOS DE SUMMONS
     ImageView summons;
     Button cierrasummons;
 
-    // LOS DE GUIA
-
+    // 5. LOS DE GUIA
     ImageView guia;
-
-    // LOS DE CARTAS
-
-    ImageView personajes;
 
     /* COSAS DE LA CAPSULA DEL MENU */
 
@@ -92,6 +88,7 @@ public class Menu_fragment extends Fragment {
         summonfrag = view.findViewById(R.id.fragment_summons);
 
 
+        // ABRIR LA CAPSULA
 
         visible.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,6 +103,8 @@ public class Menu_fragment extends Fragment {
             }
         });
 
+        // CERRAR LA CAPSULA
+
         close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -117,6 +116,8 @@ public class Menu_fragment extends Fragment {
                 online.setVisibility(View.INVISIBLE);
             }
         });
+
+        // ENLAZAR OVERLAYS
 
         enlace = view.findViewById(R.id.Buttoncartas);
         enlace.setOnClickListener(new View.OnClickListener() {
@@ -134,6 +135,7 @@ public class Menu_fragment extends Fragment {
             }
         });
 
+        // IR AL FRAGMENT PERSONAJES
 
         personajes = view.findViewById(R.id.radar1);
         personajes.setOnClickListener(new View.OnClickListener() {
@@ -208,6 +210,7 @@ public class Menu_fragment extends Fragment {
             }
         });
 
+        // IR AL FRAGMENT GUIA
 
         guia = view.findViewById(R.id.radar5);
         guia.setOnClickListener(new View.OnClickListener() {

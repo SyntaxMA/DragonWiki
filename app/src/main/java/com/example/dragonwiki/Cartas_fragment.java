@@ -21,21 +21,24 @@ public class Cartas_fragment extends Fragment {
 
 
     /* LOS FRAGMENTS DEL MENU INFERIOR */
-
     View summonfrag;
     View notifrag;
 
     /* DIVIDIDOS EN SUS BOTONES RESPECTIVOS */
 
     // LOS DE NOTICIAS
-
     ImageView noticias;
     Button cierranotis;
 
     // LOS DE SUMMONS
-
     ImageView summons;
     Button cierrasummons;
+
+    // LOS DE PERSONAJES;
+    ImageView personajes;
+
+    // LOS DE GUIAS;
+    ImageView guias;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -59,6 +62,16 @@ public class Cartas_fragment extends Fragment {
 
         notifrag = view.findViewById(R.id.fragment_noticias);
         summonfrag = view.findViewById(R.id.fragment_summons);
+
+        /* IR AL MENU PERSONAJES */
+
+        personajes = view.findViewById(R.id.radar1);
+        personajes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_cartas_fragment_to_personajes_fragment);
+            }
+        });
 
         inicio = view.findViewById(R.id.radar3);
         inicio.setOnClickListener(new View.OnClickListener() {
@@ -104,6 +117,16 @@ public class Cartas_fragment extends Fragment {
             public void onClick(View view) {
                 summonfrag.setVisibility(View.INVISIBLE);
 
+            }
+        });
+
+        /* IR AL MENU GUIAS */
+
+        guias = view.findViewById(R.id.radar5);
+        guias.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_online_fragment_to_guias_fragment);
             }
         });
 
