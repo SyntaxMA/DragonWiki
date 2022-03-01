@@ -74,9 +74,6 @@
             android:id="@+id/action_menu_fragment_to_online_fragment"
             app:destination="@id/online_fragment" />
         <action
-            android:id="@+id/action_menu_fragment_to_noticias_fragment"
-            app:destination="@id/noticias_fragment" />
-        <action
             android:id="@+id/action_menu_fragment_self"
             app:destination="@id/menu_fragment" />
         <action
@@ -88,6 +85,9 @@
         <action
             android:id="@+id/action_menu_fragment_to_personajes_fragment"
             app:destination="@id/personajes_fragment" />
+        <action
+            android:id="@+id/action_menu_fragment_to_noticias_fragment"
+            app:destination="@id/noticias_fragment" />
     </fragment>
     <fragment
         android:id="@+id/cartas_fragment"
@@ -98,17 +98,14 @@
             android:id="@+id/action_cartas_fragment_to_menu_fragment"
             app:destination="@id/menu_fragment" />
         <action
-            android:id="@+id/action_cartas_fragment_to_noticias_fragment"
-            app:destination="@id/noticias_fragment" />
-        <action
-            android:id="@+id/action_cartas_fragment_to_summons_fragment"
-            app:destination="@id/summons_fragment" />
-        <action
             android:id="@+id/action_cartas_fragment_to_guias_fragment"
             app:destination="@id/guias_fragment" />
         <action
             android:id="@+id/action_cartas_fragment_to_personajes_fragment"
             app:destination="@id/personajes_fragment" />
+        <action
+            android:id="@+id/action_cartas_fragment_to_online_fragment"
+            app:destination="@id/online_fragment" />
     </fragment>
     <fragment
         android:id="@+id/online_fragment"
@@ -119,17 +116,14 @@
             android:id="@+id/action_online_fragment_to_menu_fragment"
             app:destination="@id/menu_fragment" />
         <action
-            android:id="@+id/action_online_fragment_to_noticias_fragment"
-            app:destination="@id/noticias_fragment" />
-        <action
-            android:id="@+id/action_online_fragment_to_summons_fragment"
-            app:destination="@id/summons_fragment" />
-        <action
             android:id="@+id/action_online_fragment_to_guias_fragment"
             app:destination="@id/guias_fragment" />
         <action
             android:id="@+id/action_online_fragment_to_personajes_fragment"
             app:destination="@id/personajes_fragment" />
+        <action
+            android:id="@+id/action_online_fragment_to_cartas_fragment"
+            app:destination="@id/cartas_fragment" />
     </fragment>
     <fragment
         android:id="@+id/menuInferior_fragment"
@@ -142,8 +136,17 @@
         android:label="fragment_noticias"
         tools:layout="@layout/fragment_noticias" >
         <action
-            android:id="@+id/action_noticias_fragment_to_summons_fragment"
-            app:destination="@id/summons_fragment" />
+            android:id="@+id/action_noticias_fragment_to_cartas_fragment"
+            app:destination="@id/cartas_fragment" />
+        <action
+            android:id="@+id/action_noticias_fragment_to_guias_fragment"
+            app:destination="@id/guias_fragment" />
+        <action
+            android:id="@+id/action_noticias_fragment_to_personajes_fragment"
+            app:destination="@id/personajes_fragment" />
+        <action
+            android:id="@+id/action_noticias_fragment_to_online_fragment"
+            app:destination="@id/online_fragment" />
     </fragment>
     <fragment
         android:id="@+id/summons_fragment"
@@ -151,14 +154,17 @@
         android:label="fragment_summons"
         tools:layout="@layout/fragment_summons" >
         <action
-            android:id="@+id/action_summons_fragment_to_noticias_fragment"
-            app:destination="@id/noticias_fragment" />
+            android:id="@+id/action_summons_fragment_to_online_fragment"
+            app:destination="@id/online_fragment" />
+        <action
+            android:id="@+id/action_summons_fragment_to_personajes_fragment"
+            app:destination="@id/personajes_fragment" />
         <action
             android:id="@+id/action_summons_fragment_to_guias_fragment"
             app:destination="@id/guias_fragment" />
         <action
-            android:id="@+id/action_summons_fragment_to_personajes_fragment"
-            app:destination="@id/personajes_fragment" />
+            android:id="@+id/action_summons_fragment_to_cartas_fragment"
+            app:destination="@id/cartas_fragment" />
     </fragment>
     <fragment
         android:id="@+id/guias_fragment"
@@ -169,14 +175,14 @@
             android:id="@+id/action_guias_fragment_to_personajes_fragment"
             app:destination="@id/personajes_fragment" />
         <action
-            android:id="@+id/action_guias_fragment_to_summons_fragment"
-            app:destination="@id/summons_fragment" />
-        <action
-            android:id="@+id/action_guias_fragment_to_noticias_fragment"
-            app:destination="@id/noticias_fragment" />
-        <action
             android:id="@+id/action_guias_fragment_to_menu_fragment"
             app:destination="@id/menu_fragment" />
+        <action
+            android:id="@+id/action_guias_fragment_to_online_fragment"
+            app:destination="@id/online_fragment" />
+        <action
+            android:id="@+id/action_guias_fragment_to_cartas_fragment"
+            app:destination="@id/cartas_fragment" />
     </fragment>
     <fragment
         android:id="@+id/personajes_fragment"
@@ -187,14 +193,14 @@
             android:id="@+id/action_personajes_fragment_to_guias_fragment"
             app:destination="@id/guias_fragment" />
         <action
-            android:id="@+id/action_personajes_fragment_to_summons_fragment"
-            app:destination="@id/summons_fragment" />
-        <action
-            android:id="@+id/action_personajes_fragment_to_noticias_fragment"
-            app:destination="@id/noticias_fragment" />
-        <action
             android:id="@+id/action_personajes_fragment_to_menu_fragment"
             app:destination="@id/menu_fragment" />
+        <action
+            android:id="@+id/action_personajes_fragment_to_cartas_fragment"
+            app:destination="@id/cartas_fragment" />
+        <action
+            android:id="@+id/action_personajes_fragment_to_online_fragment"
+            app:destination="@id/online_fragment" />
     </fragment>
 
 </navigation>

@@ -18,22 +18,16 @@ public class Personajes_fragment extends Fragment {
 
     NavController navController;
 
-    /* LOS FRAGMENTS DEL MENU INFERIOR */
-    View summonfrag;
-    View notifrag;
-
     /* DIVIDIDOS EN SUS BOTONES RESPECTIVOS */
+
+    // LOS DE MAZOS
+    ImageView mazos;
 
     // LOS DE  INICIO
     ImageView inicio;
 
-    // LOS DE NOTICIAS
-    ImageView noticias;
-    Button cierranotis;
-
-    // LOS DE SUMMONS
-    ImageView summons;
-    Button cierrasummons;
+    // LOS DE ONLINE
+    ImageView online;
 
     // LOS DE GUIA
     ImageView guias;
@@ -59,30 +53,15 @@ public class Personajes_fragment extends Fragment {
 
         navController = Navigation.findNavController(view);
 
-        notifrag = view.findViewById(R.id.fragment_noticias);
-        summonfrag = view.findViewById(R.id.fragment_summons);
-
-
         /* MOSTRAR Y OCULTAR LAS NOTICIAS */
 
-        noticias = view.findViewById(R.id.radar2);
-        noticias.setOnClickListener(new View.OnClickListener() {
+        mazos = view.findViewById(R.id.radar2);
+        mazos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                notifrag.setVisibility(View.VISIBLE);
-                summonfrag.setVisibility(View.INVISIBLE);
-
+                navController.navigate(R.id.action_personajes_fragment_to_cartas_fragment);
             }
         });
-
-        cierranotis = view.findViewById(R.id.notisclose);
-        cierranotis.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                notifrag.setVisibility(View.INVISIBLE);
-            }
-        });
-
         /* IR AL MENU PRINCIPAL */
 
         inicio = view.findViewById(R.id.radar3);
@@ -95,21 +74,11 @@ public class Personajes_fragment extends Fragment {
 
         /* MOSTRAR Y OCULTAR EL SUMMONS */
 
-        summons = view.findViewById(R.id.radar4);
-        summons.setOnClickListener(new View.OnClickListener() {
+        online = view.findViewById(R.id.radar4);
+        online.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                summonfrag.setVisibility(View.VISIBLE);
-                notifrag.setVisibility(View.INVISIBLE);
-
-            }
-        });
-
-        cierrasummons = view.findViewById(R.id.summonsclose);
-        cierrasummons.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                summonfrag.setVisibility(View.INVISIBLE);
+                navController.navigate(R.id.action_personajes_fragment_to_online_fragment);
             }
         });
 

@@ -123,34 +123,9 @@ public class Menu_fragment extends Fragment {
         enlace.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                navController.navigate(R.id.action_menu_fragment_to_cartas_fragment);
-            }
-        });
 
-        enlace = view.findViewById(R.id.Buttononline);
-        enlace.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                navController.navigate(R.id.action_menu_fragment_to_online_fragment);
-            }
-        });
+                // ESTO ES PARA VER EL OVERLAY NOTICIAS
 
-        // IR AL FRAGMENT PERSONAJES
-
-        personajes = view.findViewById(R.id.radar1);
-        personajes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                navController.navigate(R.id.action_menu_fragment_to_personajes_fragment);
-            }
-        });
-
-        /* MOSTRAR Y OCULTAR LAS NOTICIAS */
-
-        noticias = view.findViewById(R.id.radar2);
-        noticias.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
                 notifrag.setVisibility(View.VISIBLE);
                 summonfrag.setVisibility(View.INVISIBLE);
 
@@ -171,25 +146,13 @@ public class Menu_fragment extends Fragment {
             }
         });
 
-
-        inicio = view.findViewById(R.id.radar3);
-        inicio.setOnClickListener(new View.OnClickListener() {
+        enlace = view.findViewById(R.id.Buttononline);
+        enlace.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                notifrag.setVisibility(View.INVISIBLE);
-                summonfrag.setVisibility(View.INVISIBLE);
 
-                visible.setVisibility(View.VISIBLE);
+                // ESTO ES PARA VER EL OVERLAY SUMMONS
 
-            }
-        });
-
-        /* MOSTRAR Y OCULTAR EL SUMMONS */
-
-        summons = view.findViewById(R.id.radar4);
-        summons.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
                 summonfrag.setVisibility(View.VISIBLE);
                 notifrag.setVisibility(View.INVISIBLE);
 
@@ -207,6 +170,54 @@ public class Menu_fragment extends Fragment {
                 summonfrag.setVisibility(View.INVISIBLE);
                 visible.setVisibility(View.VISIBLE);
 
+            }
+        });
+
+        // IR AL FRAGMENT PERSONAJES
+
+        personajes = view.findViewById(R.id.radar1);
+        personajes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_menu_fragment_to_personajes_fragment);
+            }
+        });
+
+        /* MOSTRAR Y OCULTAR LAS NOTICIAS */
+
+        noticias = view.findViewById(R.id.radar2);
+        noticias.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_menu_fragment_to_cartas_fragment);
+            }
+        });
+
+        // IR A INICIO
+
+        inicio = view.findViewById(R.id.radar3);
+        inicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                notifrag.setVisibility(View.INVISIBLE);
+                summonfrag.setVisibility(View.INVISIBLE);
+                fondoverde.setVisibility(View.INVISIBLE);
+                close.setVisibility(View.INVISIBLE);
+                cartas.setVisibility(View.INVISIBLE);
+                online.setVisibility(View.INVISIBLE);
+
+                visible.setVisibility(View.VISIBLE);
+
+            }
+        });
+
+        /* MOSTRAR Y OCULTAR EL SUMMONS */
+
+        summons = view.findViewById(R.id.radar4);
+        summons.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_menu_fragment_to_online_fragment);
             }
         });
 

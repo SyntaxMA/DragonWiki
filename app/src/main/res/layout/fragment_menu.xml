@@ -17,9 +17,6 @@
         app:layout_constraintStart_toStartOf="parent" />
 
 
-
-
-
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="340dp"
@@ -73,12 +70,12 @@
 
     <Button
         android:id="@+id/Buttoncartas"
-        android:layout_width="95dp"
+        android:layout_width="105dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:backgroundTint="#1F57C8"
         android:textColor="#000000"
-        android:text="Mazos"
+        android:text="Noticias"
         android:visibility="invisible"
         tools:visibility="visible"
         app:strokeColor="#000000"
@@ -89,12 +86,12 @@
 
     <Button
         android:id="@+id/Buttononline"
-        android:layout_width="95dp"
+        android:layout_width="105dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:backgroundTint="#B5872A"
         android:textColor="#000000"
-        android:text="Online"
+        android:text="Summon"
         android:visibility="invisible"
         tools:visibility="visible"
         app:strokeColor="#000000"
@@ -124,4 +121,5 @@
         android:id="@+id/fragment_menu_inferior"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
