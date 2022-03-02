@@ -9,7 +9,7 @@
         <entry key="app/src/main/res/layout/fragment_cartas.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_enter.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_google.xml" value="0.17" />
-        <entry key="app/src/main/res/layout/fragment_guias.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_guias.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_home_fragment.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.34601449275362317" />
         <entry key="app/src/main/res/layout/fragment_login_fragment.xml" value="0.25" />
@@ -17,7 +17,7 @@
         <entry key="app/src/main/res/layout/fragment_menu.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_menu_inferior.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_noticias.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/fragment_online.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_online.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_personajes.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/fragment_signin.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_summons.xml" value="0.25" />

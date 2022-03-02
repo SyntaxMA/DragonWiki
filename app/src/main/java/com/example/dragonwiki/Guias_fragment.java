@@ -32,6 +32,9 @@ public class Guias_fragment extends Fragment {
     // LOS DE ONLINE
     ImageView online;
 
+    // BABA LEVITANDO
+    ImageView baba;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,6 +93,10 @@ public class Guias_fragment extends Fragment {
                 navController.navigate(R.id.action_guias_fragment_to_online_fragment);
             }
         });
+
+        baba = view.findViewById(R.id.baba);
+
+
 
     }
 }
