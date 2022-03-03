@@ -6,18 +6,6 @@
     android:background="@drawable/cartas"
     tools:context=".Guias_fragment">
 
-    <com.tomer.fadingtextview.FadingTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="40dp"
-        android:gravity="left"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/baba"
-        app:layout_constraintTop_toBottomOf="@id/Ejemplo"
-        app:texts="@array/textos"
-        app:timeout="2000" />
-
     <ScrollView
         android:id="@+id/scroller"
         android:layout_width="match_parent"
@@ -162,12 +150,23 @@
 
     <include
         android:id="@+id/fragment_menu_inferior"
-        layout="@layout/fragment_menu_inferior"
+        layout="@layout/menuinferior5"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <com.tomer.fadingtextview.FadingTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="left"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/baba"
+        app:layout_constraintTop_toBottomOf="@id/Ejemplo"
+        app:texts="@array/textos"
+        app:timeout="2000" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

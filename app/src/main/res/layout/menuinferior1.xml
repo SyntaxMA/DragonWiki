@@ -24,7 +24,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/radar2"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/radarlimpio" />
+        app:srcCompat="@drawable/radarencendido" />
 
     <ImageView
         android:id="@+id/radar2"

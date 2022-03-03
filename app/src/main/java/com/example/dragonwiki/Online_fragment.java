@@ -94,5 +94,4 @@ public class Online_fragment extends Fragment {
         });
 
     }
-
 }

@@ -109,7 +109,7 @@
         android:layout_height="match_parent" />
 
     <include
-        layout="@layout/fragment_menu_inferior"
+        layout="@layout/menuinferior3"
         android:id="@+id/fragment_menu_inferior"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

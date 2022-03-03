@@ -25,7 +25,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"  />
 
-
     <include
         layout="@layout/fragment_noticias"
         android:id="@+id/fragment_noticias"
@@ -43,9 +42,20 @@
         android:layout_height="match_parent" />
 
     <include
-        layout="@layout/fragment_menu_inferior"
+        layout="@layout/menuinferior2"
         android:id="@+id/fragment_menu_inferior"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:src="@drawable/mazofondo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
