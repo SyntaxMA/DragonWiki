@@ -2,8 +2,8 @@
 <resources>
 
 <string-array name="textos">
-    <item>Hello</item>
-    <item>Fading TextView</item>
+    <item>Si vienes significa que necesitas ayuda</item>
+    <item>Selecciona una guía y te indicaré</item>
 </string-array>
 
 </resources>

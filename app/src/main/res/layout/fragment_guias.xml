@@ -6,6 +6,17 @@
     android:background="@drawable/cartas"
     tools:context=".Guias_fragment">
 
+    <com.tomer.fadingtextview.FadingTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="left"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/baba"
+        app:layout_constraintTop_toBottomOf="@id/Ejemplo"
+        app:texts="@array/textos"
+        app:timeout="2000" />
 
     <ScrollView
         android:id="@+id/scroller"
@@ -17,6 +28,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/baba">
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -106,15 +118,19 @@
 
     <TextView
         android:id="@+id/Ejemplo"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_width="292dp"
+        android:layout_height="41dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="100dp"
+        android:background="#BC089E13"
+        android:backgroundTint="#23AF0B"
         android:gravity="left"
+        android:paddingStart="15dp"
         android:text="@string/MenuGuias"
         android:textColor="#FFFFFF"
         android:textSize="32sp"
-        android:textStyle="bold"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -145,10 +161,13 @@
         android:layout_height="match_parent" />
 
     <include
-        layout="@layout/fragment_menu_inferior"
         android:id="@+id/fragment_menu_inferior"
+        layout="@layout/fragment_menu_inferior"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
