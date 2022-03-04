@@ -95,21 +95,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
 
-    <Button
+    <com.royrodriguez.transitionbutton.TransitionButton
         android:id="@+id/login"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:layout_marginTop="16dp"
         android:layout_marginBottom="32dp"
         android:backgroundTint="#80FFFFFF"
         android:text="Crear Cuenta"
-        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.85"
+        app:loaderColor="@android:color/white"
+        android:textColor="@android:color/white"
         app:strokeColor="#000000"
         app:strokeWidth="1dp"
         tools:text="Crear Cuenta" />
@@ -134,7 +134,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:inputType="textPersonName"
-        android:text="Registrate aqui"
+        android:text="Inicia Sesión aquí"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:textStyle="bold"

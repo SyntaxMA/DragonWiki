@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import pl.droidsonroids.gif.GifTextView;
+
 
 public class Menu_fragment extends Fragment {
 
@@ -48,6 +50,7 @@ public class Menu_fragment extends Fragment {
 
     ImageView visible;
     ImageView fondoverde;
+    ImageView destellos;
 
     Button close;
     Button cartas;
@@ -74,6 +77,8 @@ public class Menu_fragment extends Fragment {
 
         /* COSAS DE LA CAPSULA DEL MENU */
 
+        destellos = view.findViewById(R.id.destellitos);
+
         visible = view.findViewById(R.id.fotocapsula);
         cartas = view.findViewById(R.id.Buttoncartas);
         online = view.findViewById(R.id.Buttononline);
@@ -90,7 +95,7 @@ public class Menu_fragment extends Fragment {
 
         // ABRIR LA CAPSULA
 
-        visible.setOnClickListener(new View.OnClickListener() {
+        destellos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 

@@ -8,7 +8,6 @@
     android:background="@drawable/capsula"
     tools:context=".Menu_fragment">
 
-
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="340dp"
@@ -30,6 +29,27 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.51" />
 
+    <pl.droidsonroids.gif.GifImageButton
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/destellitos"
+        android:background="@drawable/destellos"
+        app:layout_constraintBottom_toBottomOf="@+id/fotocapsula"
+        app:layout_constraintEnd_toEndOf="@+id/fondocapsula"
+        app:layout_constraintStart_toStartOf="@+id/fondocapsula"
+        app:layout_constraintTop_toTopOf="@+id/fotocapsula" />
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/platillo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/platillo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35" />
 
     <ImageView
         android:id="@+id/fondocapsula"
@@ -92,6 +112,19 @@
         app:layout_constraintEnd_toEndOf="@+id/fondocapsula"
         app:layout_constraintTop_toTopOf="@+id/fondocapsula" />
 
+    <com.tomer.fadingtextview.FadingTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="left"
+        android:textColor="@color/naranja"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_menu_inferior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:texts="@array/menutexto"
+        app:timeout="2000" />
+
     <include
         layout="@layout/fragment_noticias"
         android:id="@+id/fragment_noticias"
@@ -109,18 +142,10 @@
         android:layout_height="match_parent" />
 
     <include
-        layout="@layout/menuinferior3"
         android:id="@+id/fragment_menu_inferior"
+        layout="@layout/menuinferior3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <pl.droidsonroids.gif.GifImageButton
-        android:layout_width="300dp"
-        android:layout_height="350dp"
-        android:background="@drawable/destellos"
-        app:layout_constraintBottom_toBottomOf="@+id/fotocapsula"
-        app:layout_constraintEnd_toEndOf="@+id/fondocapsula"
-        app:layout_constraintStart_toStartOf="@+id/fondocapsula"
-        app:layout_constraintTop_toTopOf="@+id/fotocapsula" />
+        android:layout_height="125dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
