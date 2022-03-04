@@ -33,7 +33,7 @@ public class Guias_fragment extends Fragment {
     ImageView online;
 
     // BABA LEVITANDO
-    ImageView baba;
+    ImageView babafoto;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -93,10 +93,5 @@ public class Guias_fragment extends Fragment {
                 navController.navigate(R.id.action_guias_fragment_to_online_fragment);
             }
         });
-
-        baba = view.findViewById(R.id.baba);
-
-
-
     }
 }

@@ -7,6 +7,18 @@
     android:background="@drawable/cartas"
     tools:context=".Online_fragment">
 
+    <include
+        android:id="@+id/fondonegro"
+        layout="@layout/fondonegro"
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="125dp"
+        app:layout_constraintBottom_toTopOf="@id/fragment_menu_inferior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Ejemplo" />
+
     <TextView
         android:id="@+id/Ejemplo"
         android:layout_width="292dp"
@@ -27,6 +39,7 @@
         app:layout_constraintTop_toTopOf="parent"  />
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="100dp"
@@ -122,25 +135,11 @@
     </ScrollView>
 
     <include
-        layout="@layout/fragment_noticias"
-        android:id="@+id/fragment_noticias"
-        android:visibility="invisible"
-        tools:visibility="invisible"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <include
-        layout="@layout/fragment_summons"
-        android:id="@+id/fragment_summons"
-        android:visibility="invisible"
-        tools:visibility="invisible"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <include
-        layout="@layout/menuinferior4"
         android:id="@+id/fragment_menu_inferior"
+        layout="@layout/menuinferior4"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="120dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

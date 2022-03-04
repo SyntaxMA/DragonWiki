@@ -114,4 +114,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+    <pl.droidsonroids.gif.GifImageButton
+        android:layout_width="300dp"
+        android:layout_height="350dp"
+        android:background="@drawable/destellos"
+        app:layout_constraintBottom_toBottomOf="@+id/fotocapsula"
+        app:layout_constraintEnd_toEndOf="@+id/fondocapsula"
+        app:layout_constraintStart_toStartOf="@+id/fondocapsula"
+        app:layout_constraintTop_toTopOf="@+id/fotocapsula" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,9 +1,11 @@
 package com.example.dragonwiki;
 
+import android.database.Observable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.util.Consumer;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -13,6 +15,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
+
+import java.util.concurrent.TimeUnit;
 
 public class Personajes_fragment extends Fragment {
 
@@ -32,6 +37,7 @@ public class Personajes_fragment extends Fragment {
     // LOS DE GUIA
     ImageView guias;
 
+    ProgressBar progressBar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -91,6 +97,9 @@ public class Personajes_fragment extends Fragment {
                 navController.navigate(R.id.action_personajes_fragment_to_guias_fragment);
             }
         });
+
+        progressBar = view.findViewById(R.id.progressBar1);
+
 
     }
 }

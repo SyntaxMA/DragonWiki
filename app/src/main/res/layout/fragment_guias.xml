@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/cartas"
     tools:context=".Guias_fragment">
+
+    <com.tomer.fadingtextview.FadingTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="left"
+        android:textColor="@color/naranja"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/baba"
+        app:layout_constraintTop_toBottomOf="@id/Ejemplo"
+        app:texts="@array/textos"
+        app:timeout="2000" />
 
     <ScrollView
         android:id="@+id/scroller"
@@ -12,7 +26,7 @@
         android:layout_height="match_parent"
         android:layout_marginTop="180dp"
         android:background="@drawable/framebaba"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_menu_inferior"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/baba">
@@ -20,7 +34,9 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp">
+            android:layout_height="200dp"
+            android:paddingTop="32dp"
+            android:paddingBottom="150dp">
 
             <Button
                 android:id="@+id/button"
@@ -88,18 +104,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/button5" />
 
-            <Button
-                android:id="@+id/button7"
-                android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="Button"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/button6" />
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
@@ -133,40 +137,12 @@
         app:layout_constraintTop_toBottomOf="@+id/Ejemplo" />
 
     <include
-        layout="@layout/fragment_noticias"
-        android:id="@+id/fragment_noticias"
-        android:visibility="invisible"
-        tools:visibility="invisible"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <include
-        layout="@layout/fragment_summons"
-        android:id="@+id/fragment_summons"
-        android:visibility="invisible"
-        tools:visibility="invisible"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <include
         android:id="@+id/fragment_menu_inferior"
         layout="@layout/menuinferior5"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="120dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <com.tomer.fadingtextview.FadingTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="40dp"
-        android:gravity="left"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/baba"
-        app:layout_constraintTop_toBottomOf="@id/Ejemplo"
-        app:texts="@array/textos"
-        app:timeout="2000" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
