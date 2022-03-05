@@ -71,7 +71,7 @@
         android:layout_marginBottom="5dp"
         android:backgroundTint="#C0CFC7"
         android:textColor="#000000"
-        android:text="Close"
+        android:text="Cerrar"
         android:visibility="invisible"
         tools:visibility="visible"
         app:strokeColor="#000000"

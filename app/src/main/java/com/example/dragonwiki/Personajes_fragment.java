@@ -37,7 +37,21 @@ public class Personajes_fragment extends Fragment {
     // LOS DE GUIA
     ImageView guias;
 
-    ProgressBar progressBar;
+    // CARTAS
+    ImageView carta01;
+    ImageView carta02;
+    ImageView carta03;
+    ImageView carta04;
+    ImageView carta05;
+    ImageView carta06;
+    ImageView carta07;
+    ImageView carta08;
+
+    Button atras;
+
+    View gokustr;
+    View gokuagl;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -58,6 +72,20 @@ public class Personajes_fragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         navController = Navigation.findNavController(view);
+
+        //Declarar las cartas
+
+        carta03 = view.findViewById(R.id.card3);
+        carta04 = view.findViewById(R.id.card4);
+        carta05 = view.findViewById(R.id.card5);
+        carta06 = view.findViewById(R.id.card6);
+        carta07 = view.findViewById(R.id.card7);
+        carta08 = view.findViewById(R.id.card8);
+
+        atras = view.findViewById(R.id.buttonatras);
+
+        gokustr = view.findViewById(R.id.cartagoku);
+        gokuagl = view.findViewById(R.id.gokulr);
 
         /* MOSTRAR Y OCULTAR LAS NOTICIAS */
 
@@ -98,7 +126,35 @@ public class Personajes_fragment extends Fragment {
             }
         });
 
-        progressBar = view.findViewById(R.id.progressBar1);
+        carta01 = view.findViewById(R.id.card1);
+        carta01.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                gokustr.setVisibility(View.VISIBLE);
+                atras.setVisibility(View.VISIBLE);
+                return true;
+            }
+        });
+
+        carta02 = view.findViewById(R.id.card2);
+        carta02.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                gokuagl.setVisibility(View.VISIBLE);
+                atras.setVisibility(View.VISIBLE);
+                return true;
+            }
+        });
+
+        atras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gokustr.setVisibility(View.INVISIBLE);
+                gokuagl.setVisibility(View.INVISIBLE);
+                atras.setVisibility(View.INVISIBLE);
+
+            }
+        });
 
 
     }

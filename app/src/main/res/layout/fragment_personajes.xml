@@ -25,12 +25,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"  />
 
-    <include
-        android:id="@+id/fragment_menu_inferior"
-        layout="@layout/menuinferior1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
     <ImageView
         android:id="@+id/card1"
         android:layout_width="100dp"
@@ -102,4 +96,43 @@
         app:layout_constraintStart_toEndOf="@+id/card7"
         app:layout_constraintTop_toBottomOf="@+id/card4" />
 
+    <include
+        android:id="@+id/cartagoku"
+        layout="@layout/fragment_carta01"
+        android:layout_width="wrap_content"
+        android:layout_height="540dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment_menu_inferior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/gokulr"
+        layout="@layout/fragment_carta02"
+        android:layout_width="wrap_content"
+        android:layout_height="540dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonatras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:text="Back"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Ejemplo" />
+
+    <include
+        android:id="@+id/fragment_menu_inferior"
+        layout="@layout/menuinferior1"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

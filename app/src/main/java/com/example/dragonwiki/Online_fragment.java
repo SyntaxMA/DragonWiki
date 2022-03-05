@@ -13,6 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ScrollView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
 public class Online_fragment extends Fragment {
@@ -33,6 +36,13 @@ public class Online_fragment extends Fragment {
     // LOS DE GUIA
     ImageView guias;
 
+    FloatingActionButton crear;
+    Button publica;
+    Button vuelta;
+
+    View form;
+    ScrollView scroll;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +62,11 @@ public class Online_fragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         navController = Navigation.findNavController(view);
+
+        form = view.findViewById(R.id.formulario);
+        scroll = view.findViewById(R.id.scrollView2);
+        publica = view.findViewById(R.id.buttonpublicar);
+        vuelta = view.findViewById(R.id.buttonvuelta);
 
         /* IR AL MENU PERSONAJES */
 
@@ -93,5 +108,32 @@ public class Online_fragment extends Fragment {
             }
         });
 
+        crear = view.findViewById(R.id.botoncrear);
+        crear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                form.setVisibility(View.VISIBLE);
+                scroll.setVisibility(View.INVISIBLE);
+                crear.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        vuelta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                form.setVisibility(View.INVISIBLE);
+                scroll.setVisibility(View.VISIBLE);
+                crear.setVisibility(View.VISIBLE);
+            }
+        });
+
+        publica.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                form.setVisibility(View.INVISIBLE);
+                scroll.setVisibility(View.VISIBLE);
+                crear.setVisibility(View.VISIBLE);
+            }
+        });
     }
 }

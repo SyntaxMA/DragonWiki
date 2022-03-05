@@ -51,17 +51,18 @@
         app:srcCompat="@drawable/gokucarga"
         tools:visibility="visible" />
 
-    <TextView
+    <com.tomer.fadingtextview.FadingTextView
         android:id="@+id/textocarga"
         android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:text="Now Loading"
         android:textSize="24dp"
         android:textColor="@color/naranja"
         android:textStyle="bold|italic"
         tools:visibility="visible"
+        app:texts="@array/carga"
+        app:timeout="1800"
         app:layout_constraintBottom_toTopOf="@+id/barracarga"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -9,4 +9,13 @@
     <string-array name="menutexto">
         <item>Pulsa a la cápsula para ver mas cosas</item>
     </string-array>
+
+    <string-array name="carga">
+        <item>Cargando datos</item>
+        <item>Por favor espere</item>
+    </string-array>
+
+    <string-array name="mazos">
+        <item>Crea un mazo a tu gusto</item>
+    </string-array>
 </resources>

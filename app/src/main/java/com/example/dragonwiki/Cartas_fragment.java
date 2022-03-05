@@ -52,6 +52,7 @@ public class Cartas_fragment extends Fragment {
 
         navController = Navigation.findNavController(view);
 
+
         /* IR AL MENU PERSONAJES */
 
         personajes = view.findViewById(R.id.radar1);

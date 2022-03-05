@@ -8,6 +8,7 @@
     tools:context=".Cartas_fragment">
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="292dp"
         android:layout_height="41dp"
         android:layout_marginStart="20dp"
@@ -23,39 +24,99 @@
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"  />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <include
-        layout="@layout/fragment_noticias"
-        android:id="@+id/fragment_noticias"
-        android:visibility="invisible"
-        tools:visibility="invisible"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <include
-        layout="@layout/fragment_summons"
-        android:id="@+id/fragment_summons"
-        android:visibility="invisible"
-        tools:visibility="invisible"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <include
-        layout="@layout/menuinferior2"
-        android:id="@+id/fragment_menu_inferior"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <com.tomer.fadingtextview.FadingTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textColor="@color/naranja"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/fondomazo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:texts="@array/mazos"
+        app:timeout="2000" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/fondomazo"
         android:layout_width="350dp"
         android:layout_height="350dp"
         android:src="@drawable/mazofondo"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_menu_inferior"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+    <include
+        android:id="@+id/fragment_menu_inferior"
+        layout="@layout/menuinferior2"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageView
+        android:id="@+id/cartamazo1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/gogeta"
+        app:layout_constraintBottom_toTopOf="@+id/cartamazo3"
+        app:layout_constraintStart_toStartOf="@+id/fondomazo"
+        app:layout_constraintTop_toTopOf="@+id/fondomazo" />
+
+    <ImageView
+        android:id="@+id/cartamazo2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/goku"
+        app:layout_constraintBottom_toTopOf="@+id/cartamazo4"
+        app:layout_constraintEnd_toEndOf="@+id/fondomazo"
+        app:layout_constraintTop_toTopOf="@+id/fondomazo" />
+
+    <ImageView
+        android:id="@+id/cartamazo3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/gokuagl"
+        app:layout_constraintBottom_toTopOf="@+id/cartamazo5"
+        app:layout_constraintStart_toStartOf="@+id/fondomazo" />
+
+    <ImageView
+        android:id="@+id/cartamazo4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/gokugt"
+        app:layout_constraintBottom_toTopOf="@+id/cartamazo6"
+        app:layout_constraintEnd_toEndOf="@+id/fondomazo" />
+
+    <ImageView
+        android:id="@+id/cartamazo5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/vegeto"
+        app:layout_constraintBottom_toBottomOf="@+id/fondomazo"
+        app:layout_constraintStart_toStartOf="@+id/fondomazo" />
+
+    <ImageView
+        android:id="@+id/cartamazo6"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/uigoku"
+        app:layout_constraintBottom_toBottomOf="@+id/fondomazo"
+        app:layout_constraintEnd_toEndOf="@+id/fondomazo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
