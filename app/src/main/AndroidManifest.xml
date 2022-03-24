@@ -7,7 +7,7 @@
         android:hardwareAccelerated="false"
         android:icon="@drawable/icondokkan"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/icondokkan"
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/Theme.DragonWiki">
