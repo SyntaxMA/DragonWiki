@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "963165403208",
+    "project_id": "dragonwiki-121202",
+    "storage_bucket": "dragonwiki-121202.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:963165403208:android:b2b6998b368e28a948c07d",
+        "android_client_info": {
+          "package_name": "com.example.dragonwiki"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "963165403208-q3iufjnnv77es70lcrve82pf9u3dulkp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCeS6A9zFmAY5K1sct4YsTPINtY8rWDQQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "963165403208-q3iufjnnv77es70lcrve82pf9u3dulkp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

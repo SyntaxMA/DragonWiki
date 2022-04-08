@@ -1,5 +1,6 @@
 package com.example.dragonwiki;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -9,21 +10,33 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import android.os.Handler;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.GoogleAuthProvider;
 import com.royrodriguez.transitionbutton.TransitionButton;
 
 public class Google_Fragment extends Fragment {
 
-    TextView enlace;
     TransitionButton transitionButton;
     NavController navController;
 
     private SignInButton googleSignInButton;
+    private FirebaseAuth mAuth;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_google, container, false);
@@ -35,45 +48,53 @@ public class Google_Fragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         navController = Navigation.findNavController(view);
-        transitionButton = view.findViewById(R.id.googleconfirm);
+        mAuth = FirebaseAuth.getInstance();
 
         /* BOTÓN PARA IR AL SIGN IN */
 
-        enlace = view.findViewById(R.id.googleconfirm);
-        enlace.setOnClickListener(new View.OnClickListener() {
+        googleSignInButton = view.findViewById(R.id.googleSignInButton);
+        googleSignInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                navController.navigate(R.id.action_google_Fragment_to_menu_fragment);
+                accederConGoogle();
             }
         });
+    }
 
-        transitionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Start the loading animation when the user tap the button
-                transitionButton.startAnimation();
+    private void accederConGoogle() {
+        GoogleSignInClient googleSignInClient = GoogleSignIn.getClient(requireActivity(), new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build());
 
-                // Do your networking task or background work here.
-                final Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
+        startActivityForResult(googleSignInClient.getSignInIntent(), 12345);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 12345) {
+            try {
+                firebaseAuthWithGoogle(GoogleSignIn.getSignedInAccountFromIntent(data).getResult(ApiException.class));
+            } catch (ApiException e) {
+                Log.e("ABCD", "signInResult:failed code=" + e.getStatusCode());
+            }
+        }
+    }
+
+    private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
+        if(acct == null) return;
+        mAuth.signInWithCredential(GoogleAuthProvider.getCredential(acct.getIdToken(), null))
+                .addOnCompleteListener(requireActivity(), new OnCompleteListener<AuthResult>() {
                     @Override
-                    public void run() {
-                        boolean isSuccessful = true;
-
-                        // Choose a stop animation if your call was succesful or not
-                        if (isSuccessful) {
-                            transitionButton.stopAnimation(TransitionButton.StopAnimationStyle.EXPAND, new TransitionButton.OnAnimationStopEndListener() {
-                                @Override
-                                public void onAnimationStopEnd() {
-                                    navController.navigate(R.id.action_google_Fragment_to_menu_fragment);
-                                }
-                            });
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Log.e("ABCD", "signInWithCredential:success");
+                            navController.navigate(R.id.action_google_Fragment_to_menu_fragment);
                         } else {
-                            transitionButton.stopAnimation(TransitionButton.StopAnimationStyle.SHAKE, null);
+                            Log.e("ABCD", "signInWithCredential:failure", task.getException());
                         }
-                    }
-                }, 2000);
-            }
-        });
+                    }});
     }
 }

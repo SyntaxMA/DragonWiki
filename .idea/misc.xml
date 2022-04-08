@@ -25,7 +25,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_cartas.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_enter.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_google.xml" value="0.17" />
+        <entry key="app/src/main/res/layout/fragment_google.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_guias.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_home_fragment.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.34601449275362317" />
