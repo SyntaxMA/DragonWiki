@@ -10,13 +10,12 @@
     <com.tomer.fadingtextview.FadingTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
         android:layout_marginEnd="40dp"
         android:gravity="left"
         android:textColor="@color/naranja"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/baba"
-        app:layout_constraintTop_toBottomOf="@id/Ejemplo"
+        app:layout_constraintTop_toBottomOf="@+id/Ejemplo"
         app:texts="@array/textos"
         app:timeout="2000" />
 
@@ -108,23 +107,28 @@
 
     </ScrollView>
 
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="400dp"
+        android:layout_height="125dp"
+        android:src="@drawable/menus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/Ejemplo"
         android:layout_width="292dp"
         android:layout_height="41dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="100dp"
-        android:background="#BC089E13"
-        android:backgroundTint="#23AF0B"
         android:gravity="left"
-        android:paddingStart="15dp"
-        android:text="@string/MenuGuias"
+        android:paddingStart="55dp"
+        android:text="Menu Guias"
         android:textColor="#FFFFFF"
         android:textSize="32sp"
         android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+        app:layout_constraintEnd_toEndOf="@+id/imageView8"
+        app:layout_constraintStart_toStartOf="@+id/imageView8"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
