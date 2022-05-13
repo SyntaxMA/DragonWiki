@@ -102,38 +102,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/button3" />
 
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="250dp"
-                android:layout_height="500dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="Button"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/button4" />
-
-            <Button
-                android:id="@+id/button6"
-                android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="Button"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/button5" />
-
-            <Button
-                android:id="@+id/button7"
-                android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="Button"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/button6" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -152,18 +120,20 @@
         layout="@layout/menuinferior4"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/botoncrear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="35dp"
         android:clickable="true"
         android:src="@android:drawable/ic_input_add"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Ejemplo"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@id/imageView8"
+        app:layout_constraintTop_toTopOf="@id/imageView8" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
