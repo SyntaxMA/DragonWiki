@@ -21,7 +21,7 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="400dp"
+        android:layout_width="0dp"
         android:layout_height="125dp"
         android:src="@drawable/menus"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,9 +32,10 @@
         android:id="@+id/Ejemplo"
         android:layout_width="292dp"
         android:layout_height="41dp"
+        android:layout_marginStart="10dp"
         android:gravity="left"
         android:paddingStart="55dp"
-        android:text="Menu Online"
+        android:text="Online"
         android:textColor="#FFFFFF"
         android:textSize="32sp"
         android:textStyle="bold|italic"
@@ -69,41 +70,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="Button"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/button" />
-
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="Button"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/button2" />
-
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="Button"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/button3" />
-
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
@@ -120,6 +86,7 @@
         layout="@layout/menuinferior4"
         android:layout_width="match_parent"
         android:layout_height="120dp"
+        android:layout_marginBottom="-5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -128,7 +95,7 @@
         android:id="@+id/botoncrear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
+        android:layout_marginStart="28dp"
         android:layout_marginTop="35dp"
         android:clickable="true"
         android:src="@android:drawable/ic_input_add"

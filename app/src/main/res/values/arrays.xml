@@ -18,4 +18,9 @@
     <string-array name="mazos">
         <item>Crea un mazo a tu gusto</item>
     </string-array>
+
+    <string-array name="cartas">
+        <item>Inspecciona un personaje</item>
+        <item>Manten pulsado una carta</item>
+    </string-array>
 </resources>
