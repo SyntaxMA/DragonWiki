@@ -35,7 +35,7 @@
         android:layout_marginStart="10dp"
         android:gravity="left"
         android:paddingStart="55dp"
-        android:text="Online"
+        android:text="Sección Online"
         android:textColor="#FFFFFF"
         android:textSize="32sp"
         android:textStyle="bold|italic"
@@ -55,22 +55,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="200dp">
-
-            <Button
-                android:id="@+id/button"
-                android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="Button"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/postsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintStart_toStartOf="parent" />
     </ScrollView>
 
     <include
