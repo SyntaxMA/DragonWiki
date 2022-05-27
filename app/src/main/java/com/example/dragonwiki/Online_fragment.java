@@ -105,7 +105,7 @@ public class Online_fragment extends Fragment {
             }
         });
 
-        /* MOSTRAR Y OCULTAR LAS NOTICIAS */
+        /* IR AL MENU MAZOS */
 
         mazos = view.findViewById(R.id.radar2);
         mazos.setOnClickListener(new View.OnClickListener() {
@@ -135,22 +135,10 @@ public class Online_fragment extends Fragment {
             }
         });
 
-        crear = view.findViewById(R.id.botoncrear);
-        crear.setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.botoncrear).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                form.setVisibility(View.VISIBLE);
-                scroll.setVisibility(View.INVISIBLE);
-                crear.setVisibility(View.INVISIBLE);
-            }
-        });
-
-        vuelta.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                form.setVisibility(View.INVISIBLE);
-                scroll.setVisibility(View.VISIBLE);
-                crear.setVisibility(View.VISIBLE);
+            public void onClick(View v) {
+                navController.navigate(R.id.newPostFragment);
             }
         });
 

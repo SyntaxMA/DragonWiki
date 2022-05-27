@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:backgroundTint="#00000000"
     app:cardUseCompatPadding="true">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:orientation="horizontal"
@@ -37,12 +38,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
+                    android:textColor="@color/naranja"
                     android:text="Nombre autor"/>
                 <TextView
                     android:id="@+id/dateTextView"
                     style="@style/Base.TextAppearance.AppCompat.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/naranja"
                     android:text="Fecha"
                     android:layout_marginLeft="20dp"/>
             </LinearLayout>
@@ -52,6 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:textColor="@color/naranja"
                 android:text="Contenido"/>
             <ImageView
                 android:id="@+id/mediaImage"
@@ -78,6 +82,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
                     android:layout_gravity="center_vertical"
+                    android:textColor="@color/naranja"
                     android:text="200K"/>
             </LinearLayout>
         </LinearLayout>

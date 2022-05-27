@@ -21,7 +21,7 @@ public class Media_fragment extends Fragment {
     ImageView imageView;
     public AppViewModel appViewModel;
 
-    public MediaFragment() {
+    public Media_fragment() {
     // Required empty public constructor
     }
     @Override
