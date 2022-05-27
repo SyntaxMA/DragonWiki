@@ -183,7 +183,7 @@ public class Online_fragment extends Fragment {
                 holder.contentTextView.setText(post.content);
             } else {
                 Glide.with(getContext()).load(R.drawable.userunknown).circleCrop().into(holder.authorPhotoImageView);
-                holder.authorTextView.setText("Usuario desconocido");
+                holder.authorTextView.setText("Usuario invitado");
                 holder.contentTextView.setText(post.content);
             }
             holder.dateTextView.setText(DateFormat.format("dd/MM/yy HH:mm", new Date(post.date)).toString());
