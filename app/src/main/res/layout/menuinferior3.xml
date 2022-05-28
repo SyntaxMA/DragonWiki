@@ -7,7 +7,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/inferior"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="-2dp"
@@ -66,65 +66,126 @@
         app:layout_constraintStart_toEndOf="@id/radar4"
         app:srcCompat="@drawable/radarlimpio" />
 
+    <ImageView
+        android:id="@+id/iconcartas"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/radar1"
+        app:layout_constraintEnd_toEndOf="@+id/radar1"
+        app:layout_constraintStart_toStartOf="@+id/radar1"
+        app:layout_constraintTop_toTopOf="@+id/radar1"
+        app:srcCompat="@drawable/iconcartas" />
+
     <TextView
         android:id="@+id/cartastext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cartas"
-        android:textStyle="bold"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold||italic"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/radar1"
         app:layout_constraintEnd_toEndOf="@+id/radar1"
         app:layout_constraintStart_toStartOf="@+id/radar1"
-        app:layout_constraintTop_toTopOf="@+id/radar1" />
+        app:layout_constraintTop_toTopOf="@+id/radar1"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/iconmazos"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:layout_constraintBottom_toBottomOf="@+id/radar2"
+        app:layout_constraintEnd_toEndOf="@+id/radar2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/radar2"
+        app:layout_constraintTop_toTopOf="@+id/radar2"
+        app:srcCompat="@drawable/iconmazos" />
 
     <TextView
         android:id="@+id/noticiastext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Mazos"
-        android:textStyle="bold"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold||italic"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/radar2"
         app:layout_constraintEnd_toEndOf="@+id/radar2"
         app:layout_constraintStart_toStartOf="@+id/radar2"
-        app:layout_constraintTop_toTopOf="@+id/radar2" />
+        app:layout_constraintTop_toTopOf="@+id/radar2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/iconhome"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/radar3"
+        app:layout_constraintEnd_toEndOf="@+id/radar3"
+        app:layout_constraintStart_toEndOf="@+id/radar2"
+        app:layout_constraintTop_toTopOf="@+id/radar3"
+        app:srcCompat="@drawable/iconhome" />
 
     <TextView
         android:id="@+id/iniciotext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Inicio"
-        android:textStyle="bold"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold||italic"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/radar3"
         app:layout_constraintEnd_toEndOf="@+id/radar3"
         app:layout_constraintStart_toStartOf="@+id/radar3"
-        app:layout_constraintTop_toTopOf="@+id/radar3" />
+        app:layout_constraintTop_toTopOf="@+id/radar3"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/icononline"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/radar4"
+        app:layout_constraintEnd_toEndOf="@+id/radar4"
+        app:layout_constraintStart_toStartOf="@+id/radar4"
+        app:layout_constraintTop_toTopOf="@+id/radar4"
+        app:srcCompat="@drawable/icononline" />
 
     <TextView
         android:id="@+id/summonstext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Online"
-        android:textStyle="bold"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold||italic"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/radar4"
         app:layout_constraintEnd_toEndOf="@+id/radar4"
         app:layout_constraintStart_toStartOf="@+id/radar4"
-        app:layout_constraintTop_toTopOf="@+id/radar4" />
+        app:layout_constraintTop_toTopOf="@+id/radar4"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/iconguias"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/radar5"
+        app:layout_constraintEnd_toEndOf="@+id/radar5"
+        app:layout_constraintStart_toStartOf="@+id/radar5"
+        app:layout_constraintTop_toTopOf="@+id/radar5"
+        app:srcCompat="@drawable/iconguias" />
 
     <TextView
         android:id="@+id/guiatext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Guias"
-        android:textStyle="bold"
-        android:textColor="#000000"
+        android:text="Ajustes"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold||italic"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/radar5"
         app:layout_constraintEnd_toEndOf="@+id/radar5"
         app:layout_constraintStart_toStartOf="@+id/radar5"
-        app:layout_constraintTop_toTopOf="@+id/radar5" />
+        app:layout_constraintTop_toTopOf="@+id/radar5"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

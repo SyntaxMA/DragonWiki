@@ -46,28 +46,173 @@
             android:paddingTop="32dp"
             android:paddingBottom="150dp">
 
-            <Button
-                android:id="@+id/button"
-                android:layout_width="250dp"
+            <ImageView
+                android:id="@+id/bola1"
+                android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="Button"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/bola1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/infobasica"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="#66FFEB3B"
+                android:text="Información básica"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toEndOf="@+id/bola1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/bola2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/bola2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bola1" />
+
+            <Button
+                android:id="@+id/infocartas"
                 android:layout_width="250dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:text="Button"
+                android:backgroundTint="#66FFEB3B"
+                android:text="Cartas y estadísticas"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/button" />
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toEndOf="@+id/bola2"
+                app:layout_constraintTop_toBottomOf="@id/infobasica" />
 
+            <ImageView
+                android:id="@+id/bola3"
+                android:layout_width="42dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/bola3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bola2" />
+
+            <Button
+                android:id="@+id/creamazos"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#66FFEB3B"
+                android:text="Creación de mazos"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toEndOf="@+id/bola3"
+                app:layout_constraintTop_toBottomOf="@id/infocartas" />
+
+            <ImageView
+                android:id="@+id/bola4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/bola4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bola3" />
+
+            <Button
+                android:id="@+id/mazosavanzado"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#66FFEB3B"
+                android:text="Perfección de mazos"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toEndOf="@+id/bola4"
+                app:layout_constraintTop_toBottomOf="@id/creamazos" />
+
+            <ImageView
+                android:id="@+id/bola5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/bola5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bola4" />
+
+            <Button
+                android:id="@+id/infonoticias"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#66FFEB3B"
+                android:text="Noticias y Summons"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toEndOf="@+id/bola5"
+                app:layout_constraintTop_toBottomOf="@id/mazosavanzado" />
+
+            <ImageView
+                android:id="@+id/bola6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/bola6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bola5" />
+
+            <Button
+                android:id="@+id/infoonline"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#66FFEB3B"
+                android:text="Uso del menú online"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toEndOf="@+id/bola6"
+                app:layout_constraintTop_toBottomOf="@id/infonoticias" />
+
+            <ImageView
+                android:id="@+id/bola7"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/bola7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bola6" />
+
+            <Button
+                android:id="@+id/Cerrar"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#66FFEB3B"
+                android:text="Cerrar Sesion"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toEndOf="@+id/bola7"
+                app:layout_constraintTop_toBottomOf="@id/infoonline" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -89,7 +234,7 @@
         android:layout_marginStart="10dp"
         android:gravity="left"
         android:paddingStart="55dp"
-        android:text="Guias y Ayuda"
+        android:text="Ajustes y Guías"
         android:textColor="#FFFFFF"
         android:textSize="32sp"
         android:textStyle="bold|italic"
