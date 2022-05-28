@@ -18,8 +18,8 @@
 
     <ImageView
         android:id="@+id/radar1"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
         android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/radar2"
@@ -28,8 +28,8 @@
 
     <ImageView
         android:id="@+id/radar2"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
         android:layout_marginBottom="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/radar3"
@@ -38,8 +38,8 @@
 
     <ImageView
         android:id="@+id/radar3"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
         android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/radar4"
@@ -48,8 +48,8 @@
 
     <ImageView
         android:id="@+id/radar4"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
         android:layout_marginBottom="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/radar5"
@@ -58,8 +58,8 @@
 
     <ImageView
         android:id="@+id/radar5"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
         android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,7 +82,7 @@
         android:layout_height="wrap_content"
         android:text="Cartas"
         android:textColor="#FFFFFF"
-        android:textStyle="bold||italic"
+        android:textStyle="bold"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/radar1"
         app:layout_constraintEnd_toEndOf="@+id/radar1"
@@ -94,6 +94,7 @@
         android:id="@+id/iconmazos"
         android:layout_width="75dp"
         android:layout_height="75dp"
+        android:layout_marginStart="-5dp"
         app:layout_constraintBottom_toBottomOf="@+id/radar2"
         app:layout_constraintEnd_toEndOf="@+id/radar2"
         app:layout_constraintHorizontal_bias="0.0"
@@ -107,7 +108,7 @@
         android:layout_height="wrap_content"
         android:text="Mazos"
         android:textColor="#FFFFFF"
-        android:textStyle="bold||italic"
+        android:textStyle="bold"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/radar2"
         app:layout_constraintEnd_toEndOf="@+id/radar2"
@@ -131,7 +132,7 @@
         android:layout_height="wrap_content"
         android:text="Inicio"
         android:textColor="#FFFFFF"
-        android:textStyle="bold||italic"
+        android:textStyle="bold"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/radar3"
         app:layout_constraintEnd_toEndOf="@+id/radar3"
@@ -155,7 +156,7 @@
         android:layout_height="wrap_content"
         android:text="Online"
         android:textColor="#FFFFFF"
-        android:textStyle="bold||italic"
+        android:textStyle="bold"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/radar4"
         app:layout_constraintEnd_toEndOf="@+id/radar4"
@@ -179,7 +180,7 @@
         android:layout_height="wrap_content"
         android:text="Ajustes"
         android:textColor="#FFFFFF"
-        android:textStyle="bold||italic"
+        android:textStyle="bold"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/radar5"
         app:layout_constraintEnd_toEndOf="@+id/radar5"

@@ -68,6 +68,5 @@ dependencies {
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
     implementation 'com.royrodriguez:transitionbutton:0.2.0'
     implementation 'com.zolad:zoominimageview:1.0.0'
-    implementation 'com.google.firebase:firebase-auth:21.0.3'
 
 }
