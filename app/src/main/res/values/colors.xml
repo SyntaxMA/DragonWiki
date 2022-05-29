@@ -9,4 +9,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="seminegro">#99000000</color>
     <color name="naranja">#FF9800</color>
+    <color name="verde">#2E5731</color>
+    <color name="amarillo">#FFEB3B</color>
+    <color name="rojo">#F62617</color>
+    <color name="azul">#03A9F4</color>
+    <color name="verdeclaro">#08BA0B</color>
+
 </resources>

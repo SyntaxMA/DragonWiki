@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/seminegro">
+
+
+    <ImageView
+        android:id="@+id/guia4"
+        android:layout_width="350dp"
+        android:layout_height="560dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fondoguias" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-32dp"
+        android:text="Atrás"
+        android:backgroundTint="@color/naranja"
+        app:layout_constraintBottom_toBottomOf="@+id/guia4"
+        app:layout_constraintEnd_toEndOf="@+id/guia4"
+        app:layout_constraintStart_toStartOf="@+id/guia4" />
+
+    <TextView
+        android:id="@+id/titulo_guia4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Perfección de mazos"
+        android:textColor="@color/amarillo"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/guia4"
+        app:layout_constraintStart_toStartOf="@+id/guia4"
+        app:layout_constraintTop_toTopOf="@+id/guia4" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/guia4"
+        app:layout_constraintEnd_toEndOf="@+id/guia4"
+        app:layout_constraintStart_toStartOf="@+id/guia4"
+        app:layout_constraintTop_toTopOf="@+id/guia4">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/texto1_guias4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Las combinaciones correctas de la Habilidad de \nlíder de los personajes con las Habilidades \npasivas de los personajes pueden tener el efecto \nefectivo/óptimo deseado para un gran impulso \nen el ataque."
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/texto2_guias4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Actualmente, existen 5 tipos de líderes:"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/texto1_guias4" />
+
+                <TextView
+                    android:id="@+id/texto3_guias4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Líderes de todo tipo: da impulso a todos los \naliados sin ninguna condición."
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/texto2_guias4" />
+
+                <TextView
+                    android:id="@+id/texto4_guias4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Líderes Super y Extreme: Las cartas con una habilidad de líder como esta dan un impulso ilimitado a todos los aliados, solo limitado por \nestar en la clase Super o Extreme."
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/texto3_guias4" />
+
+                <TextView
+                    android:id="@+id/texto5_guias4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Líderes de color: estos líderes dan impulso a un color específico. El impulso se aplica a las clases Extreme y Super. Estos no son tan relevantes en \nel metajuego actual, pero aún son viables en \nciertos eventos."
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/texto4_guias4" />
+
+                <TextView
+                    android:id="@+id/texto6_guias4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Líderes de tipo Súper/Extremo: para obtener el impulso, las cartas deben tener el Despertar Z \npara que la clase Súper o Extrema entre en sus tipos. Por lo general, se aplica a ambas clases, siendo una de ellas un impulso más bajo."
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/texto5_guias4" />
+
+                <TextView
+                    android:id="@+id/texto7_guias4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Líderes de categoría: los líderes más nuevos introducidos en el juego con una nueva \nmecánica: categorías. Estos requieren que una tarjeta esté en una categoría específica. Estos líderes a veces también tienen un líder \nsecundario, que varía entre los otros tres \nanteriores. Es un impulso menor que el de la categoría."
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/texto6_guias4" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

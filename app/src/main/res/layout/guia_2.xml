@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/seminegro">
+
+
+    <ImageView
+        android:id="@+id/guia2"
+        android:layout_width="350dp"
+        android:layout_height="560dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fondoguias" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-32dp"
+        android:text="Atrás"
+        android:backgroundTint="@color/naranja"
+        app:layout_constraintBottom_toBottomOf="@+id/guia2"
+        app:layout_constraintEnd_toEndOf="@+id/guia2"
+        app:layout_constraintStart_toStartOf="@+id/guia2" />
+
+    <TextView
+        android:id="@+id/titulo_guia2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Cartas y estadísticas"
+        android:textColor="@color/amarillo"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/guia2"
+        app:layout_constraintStart_toStartOf="@+id/guia2"
+        app:layout_constraintTop_toTopOf="@+id/guia2" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/guia2"
+        app:layout_constraintEnd_toEndOf="@+id/guia2"
+        app:layout_constraintStart_toStartOf="@+id/guia2"
+        app:layout_constraintTop_toTopOf="@+id/guia2">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/texto1_guias2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Las cartas tienen diferentes atributos. \nCada carta suele tener diferentes parámetros \npara así hacerla lo más unica posible."
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/texto2_guias2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="15dp"
+                    android:text="El sistema de categorías separa los personajes \nen diferentes grupos. Algunos personajes pueden \nno pertenecer a ninguna categoría."
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/texto1_guias2" />
+
+                <TextView
+                    android:id="@+id/texto3_guias2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Las habilidades de enlace no se duplicarán. Si tienes 3 cartas con Fused Fighter en la misma rotación, las tres obtendrán Ki +2, la carta del \n medio no recibirá Ki +4."
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/texto2_guias2" />
+
+                <TextView
+                    android:id="@+id/texto4_guias2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Las habilidades activas son habilidades \nespeciales que se pueden activar antes de \nrecolectar Ki, generalmente solo una vez por \nbatalla y solo después de una cierta cantidad de \nturnos. \nUna vez cumplida la condición, el jugador puede \ndecidir si es preferible activarlo de inmediato o \nesperar a otro turno."
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/texto3_guias2" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
