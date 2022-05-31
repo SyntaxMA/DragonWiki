@@ -11,6 +11,7 @@
         android:id="@+id/guia2"
         android:layout_width="350dp"
         android:layout_height="560dp"
+        android:layout_marginBottom="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,7 +19,7 @@
         app:srcCompat="@drawable/fondoguias" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/cerrarguias2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="-32dp"

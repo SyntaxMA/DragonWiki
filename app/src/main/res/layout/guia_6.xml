@@ -11,6 +11,7 @@
         android:id="@+id/guia6"
         android:layout_width="350dp"
         android:layout_height="560dp"
+        android:layout_marginBottom="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,7 +19,7 @@
         app:srcCompat="@drawable/fondoguias" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/cerrarguias6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="-32dp"
@@ -72,10 +73,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="15dp"
-                    android:text=""
+                    android:text="Sabemos sobre la responsabilidad de los \nmensajes, cualquier cuenta que escriba y \nincumpla alguna de las siguientes reglas \n quedarà con la cuenta suspendida de forma \npermanente. Esta es la lista: \n\n1. No hagas mal uso ni spam en ninguno de \nlos canales. \n\n2. Sin contenido inapropiado o inseguro. \n\n3.Sea respetuoso, cívico y acogedor. \n\n4. Esta prohibido promocionar contenido propio. \n\n5. No utilice el chat como una app de citas. \n\n6. No se permiten temas controvertidos como \nreligión o política. \n\n7. No enlace sitios web fraudulentos. \n\n8. Está prohibido el lenguaje discriminatorio \ny el discurso de odio. \n\n9. No inunde el chat con mensajes que excedan \nlas 7 líneas en la pantalla de una computadora. \n\n10.No se haga pasar por otros, incluidas las \nfiguras públicas."
                     android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>

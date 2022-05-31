@@ -63,8 +63,6 @@
         app:layout_constraintStart_toStartOf="@+id/imageView8"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-
     <include
         android:id="@+id/formulario"
         layout="@layout/crearonline"

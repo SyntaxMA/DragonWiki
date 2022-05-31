@@ -183,6 +183,9 @@
         <action
             android:id="@+id/action_guias_fragment_to_cartas_fragment"
             app:destination="@id/cartas_fragment" />
+        <action
+            android:id="@+id/action_guias_fragment_to_login_fragment"
+            app:destination="@id/login_fragment" />
     </fragment>
     <fragment
         android:id="@+id/personajes_fragment"

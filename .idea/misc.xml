@@ -10,10 +10,12 @@
         <entry key="..\:/DragonWiki/app/src/main/res/layout/fragment_carta01.xml" value="0.33" />
         <entry key="..\:/DragonWiki/app/src/main/res/layout/fragment_carta02.xml" value="0.36666666666666664" />
         <entry key="..\:/DragonWiki/app/src/main/res/layout/fragment_enter.xml" value="0.33" />
+        <entry key="..\:/DragonWiki/app/src/main/res/layout/fragment_google.xml" value="0.36666666666666664" />
         <entry key="..\:/DragonWiki/app/src/main/res/layout/fragment_guias.xml" value="0.33" />
         <entry key="..\:/DragonWiki/app/src/main/res/layout/fragment_home_fragment.xml" value="0.33" />
         <entry key="..\:/DragonWiki/app/src/main/res/layout/fragment_login_fragment.xml" value="0.20520833333333333" />
         <entry key="..\:/DragonWiki/app/src/main/res/layout/fragment_mazos.xml" value="0.33" />
+        <entry key="..\:/DragonWiki/app/src/main/res/layout/fragment_media.xml" value="0.36666666666666664" />
         <entry key="..\:/DragonWiki/app/src/main/res/layout/fragment_menu.xml" value="0.33" />
         <entry key="..\:/DragonWiki/app/src/main/res/layout/fragment_menu_inferior.xml" value="0.36666666666666664" />
         <entry key="..\:/DragonWiki/app/src/main/res/layout/fragment_new_post.xml" value="0.36666666666666664" />
