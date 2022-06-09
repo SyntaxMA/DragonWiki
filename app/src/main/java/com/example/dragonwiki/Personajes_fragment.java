@@ -1,27 +1,38 @@
 package com.example.dragonwiki;
 
-import android.database.Observable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.util.Consumer;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
+import android.widget.TextView;
 
-import java.util.concurrent.TimeUnit;
+import com.bumptech.glide.Glide;
+import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FieldValue;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
+
+import java.util.Date;
 
 public class Personajes_fragment extends Fragment {
 
     NavController navController;
+    public AppViewModel appViewModel;
 
     /* DIVIDIDOS EN SUS BOTONES RESPECTIVOS */
 
@@ -37,20 +48,8 @@ public class Personajes_fragment extends Fragment {
     // LOS DE GUIA
     ImageView guias;
 
-    // CARTAS
-    ImageView carta01;
-    ImageView carta02;
-    ImageView carta03;
-    ImageView carta04;
-    ImageView carta05;
-    ImageView carta06;
-    ImageView carta07;
-    ImageView carta08;
-
     Button atras;
 
-    View gokustr;
-    View gokuagl;
 
 
     @Override
@@ -72,22 +71,24 @@ public class Personajes_fragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         navController = Navigation.findNavController(view);
+        atras = view.findViewById(R.id.buttonatras);
+
 
         //Declarar las cartas
 
-        carta03 = view.findViewById(R.id.card3);
-        carta04 = view.findViewById(R.id.card4);
-        carta05 = view.findViewById(R.id.card5);
-        carta06 = view.findViewById(R.id.card6);
-        carta07 = view.findViewById(R.id.card7);
-        carta08 = view.findViewById(R.id.card8);
+        RecyclerView cardsRecyclerView = view.findViewById(R.id.cardsRecyclerView);
 
-        atras = view.findViewById(R.id.buttonatras);
+        Query query = FirebaseFirestore.getInstance().collection("cards");
 
-        gokustr = view.findViewById(R.id.cartagoku);
-        gokuagl = view.findViewById(R.id.gokulr);
+        FirestoreRecyclerOptions<Card> options = new FirestoreRecyclerOptions.Builder<Card>()
+                .setQuery(query, Card.class)
+                .setLifecycleOwner(this)
+                .build();
 
-        /* MOSTRAR Y OCULTAR LAS NOTICIAS */
+        cardsRecyclerView.setAdapter(new CardsAdapter(options));
+        appViewModel = new ViewModelProvider(requireActivity()).get(AppViewModel.class);
+
+        /* IR AL MENU MAZOS */
 
         mazos = view.findViewById(R.id.radar2);
         mazos.setOnClickListener(new View.OnClickListener() {
@@ -106,7 +107,7 @@ public class Personajes_fragment extends Fragment {
             }
         });
 
-        /* MOSTRAR Y OCULTAR EL SUMMONS */
+        /* IR AL MENU ONLINE */
 
         online = view.findViewById(R.id.radar4);
         online.setOnClickListener(new View.OnClickListener() {
@@ -126,36 +127,60 @@ public class Personajes_fragment extends Fragment {
             }
         });
 
-        carta01 = view.findViewById(R.id.card1);
-        carta01.setOnLongClickListener(new View.OnLongClickListener() {
+        view.findViewById(R.id.botoncrearcarta).setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onLongClick(View view) {
-                gokustr.setVisibility(View.VISIBLE);
-                atras.setVisibility(View.VISIBLE);
-                return true;
+            public void onClick(View v) {
+                navController.navigate(R.id.newCardFragment);
             }
         });
-
-        carta02 = view.findViewById(R.id.card2);
-        carta02.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View view) {
-                gokuagl.setVisibility(View.VISIBLE);
-                atras.setVisibility(View.VISIBLE);
-                return true;
-            }
-        });
-
         atras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gokustr.setVisibility(View.INVISIBLE);
-                gokuagl.setVisibility(View.INVISIBLE);
                 atras.setVisibility(View.INVISIBLE);
-
             }
         });
 
+    }
 
+    class CardsAdapter extends FirestoreRecyclerAdapter<Card, CardsAdapter.CardViewHolder> {
+        public CardsAdapter(@NonNull FirestoreRecyclerOptions<Card> options) {
+            super(options);
+        }
+
+        @NonNull
+        @Override
+        public CardViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            return new CardViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_card, parent, false));
+        }
+
+        @Override
+        protected void onBindViewHolder(@NonNull CardViewHolder holder, int position, @NonNull final Card card) {
+            if (card.mediaUrl != null) {
+                Glide.with(getContext()).load(card.mediaUrl).into(holder.authorPhotoImageView);
+            } else {
+                Glide.with(getContext()).load(R.drawable.iconcartas).into(holder.authorPhotoImageView);
+            }
+            // Miniatura de media
+            if (card.mediaUrl != null) {
+                holder.authorPhotoImageView.setVisibility(View.VISIBLE);
+                Glide.with(requireView()).load(card.mediaUrl).centerCrop().into(holder.authorPhotoImageView);
+                holder.authorPhotoImageView.setOnClickListener(view -> {
+                    appViewModel.cardSeleccionado.setValue(card);
+                    navController.navigate(R.id.carta_fragment);
+                });
+            } else {
+                holder.authorPhotoImageView.setVisibility(View.GONE);
+
+            }
+        }
+
+        class CardViewHolder extends RecyclerView.ViewHolder {
+            ImageView authorPhotoImageView;
+
+            CardViewHolder(@NonNull View itemView) {
+                super(itemView);
+                authorPhotoImageView = itemView.findViewById(R.id.photoImageView);
+            }
+        }
     }
 }

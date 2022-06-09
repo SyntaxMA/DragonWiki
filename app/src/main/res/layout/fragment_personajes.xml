@@ -48,117 +48,26 @@
         app:layout_constraintStart_toStartOf="@+id/imageView8"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/card1"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="10dp"
-        android:src="@drawable/goku"
-        app:layout_constraintEnd_toStartOf="@+id/card2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Ejemplo" />
-
-    <ImageView
-        android:id="@+id/card2"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="10dp"
-        android:src="@drawable/gokuagl"
-        app:layout_constraintEnd_toStartOf="@+id/card3"
-        app:layout_constraintStart_toEndOf="@+id/card1"
-        app:layout_constraintTop_toBottomOf="@+id/Ejemplo" />
-
-    <ImageView
-        android:id="@+id/card3"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="10dp"
-        android:src="@drawable/turles"
-        app:layout_constraintEnd_toStartOf="@+id/card4"
-        app:layout_constraintStart_toEndOf="@+id/card2"
-        app:layout_constraintTop_toBottomOf="@+id/Ejemplo" />
-
-    <ImageView
-        android:id="@+id/card4"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="5dp"
-        android:src="@drawable/uigoku"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/card3"
-        app:layout_constraintTop_toBottomOf="@+id/Ejemplo" />
-
-    <ImageView
-        android:id="@+id/card5"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:src="@drawable/gokugt"
-        app:layout_constraintEnd_toStartOf="@+id/card6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card1" />
-
-    <ImageView
-        android:id="@+id/card6"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:src="@drawable/vegeto"
-        app:layout_constraintEnd_toStartOf="@+id/card7"
-        app:layout_constraintStart_toEndOf="@+id/card5"
-        app:layout_constraintTop_toBottomOf="@+id/card2" />
-
-    <ImageView
-        android:id="@+id/card7"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:src="@drawable/gogeta"
-        app:layout_constraintEnd_toStartOf="@+id/card8"
-        app:layout_constraintStart_toEndOf="@+id/card6"
-        app:layout_constraintTop_toBottomOf="@+id/card3" />
-
-    <ImageView
-        android:id="@+id/card8"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="5dp"
-        android:src="@drawable/majin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/card7"
-        app:layout_constraintTop_toBottomOf="@+id/card4" />
-
-    <include
-        android:id="@+id/cartagoku"
-        layout="@layout/fragment_carta01"
-        android:layout_width="wrap_content"
-        android:layout_height="540dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/fragment_menu_inferior"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <include
-        android:id="@+id/gokulr"
-        layout="@layout/fragment_carta02"
-        android:layout_width="wrap_content"
-        android:layout_height="540dp"
-        android:visibility="gone"
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="110dp"
+        android:layout_marginBottom="150dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cardsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="4"
+            app:layout_constraintStart_toStartOf="parent" />
+    </ScrollView>
 
     <Button
         android:id="@+id/buttonatras"
@@ -171,6 +80,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Ejemplo" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/botoncrearcarta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="35dp"
+        android:clickable="true"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintStart_toStartOf="@id/imageView8"
+        app:layout_constraintTop_toTopOf="@id/imageView8" />
     <include
         android:id="@+id/fragment_menu_inferior"
         layout="@layout/menuinferior1"

@@ -11,14 +11,8 @@ import android.view.ViewGroup;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Bundle;
-import android.os.Environment;
-import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -27,23 +21,18 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.content.FileProvider;
-import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.BuildConfig;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.UUID;
@@ -90,6 +79,7 @@ public class NewPostFragment extends Fragment {
     }
     private void publicar() {
         String postContent = postConentEditText.getText().toString();
+
         if(TextUtils.isEmpty(postContent)){
             postConentEditText.setError("Required");
             return;
@@ -108,9 +98,7 @@ public class NewPostFragment extends Fragment {
         Date data = Calendar.getInstance().getTime();
         long date = data.getTime();
 
-        Post post = new Post(user.getUid(), user.getDisplayName(),
-                (user.getPhotoUrl() != null ? user.getPhotoUrl().toString() :
-                        null), postContent, mediaUrl, mediaTipo, date);
+        Post post = new Post(user.getUid(), user.getDisplayName(), (user.getPhotoUrl() != null ? user.getPhotoUrl().toString() : null), postContent, mediaUrl, mediaTipo, date);
         FirebaseFirestore.getInstance().collection("posts")
                 .add(post)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
@@ -129,26 +117,11 @@ public class NewPostFragment extends Fragment {
         FirebaseStorage.getInstance().getReference(mediaTipo + "/" +
                 UUID.randomUUID())
                 .putFile(mediaUri)
-                .continueWithTask(task ->
-                        task.getResult().getStorage().getDownloadUrl())
-                .addOnSuccessListener(url -> guardarEnFirestore(postText,
-                        url.toString()));
+                .continueWithTask(task -> task.getResult().getStorage().getDownloadUrl()).addOnSuccessListener(url -> guardarEnFirestore(postText, url.toString()));
     }
-
-
     private final ActivityResultLauncher<String> galeria =
-            registerForActivityResult(new ActivityResultContracts.GetContent(), uri -> {
-                appViewModel.setMediaSeleccionado(uri, mediaTipo);
-            });
-    private final ActivityResultLauncher<Uri> camaraFotos =
-            registerForActivityResult(new ActivityResultContracts.TakePicture(),
-                    isSuccess -> {
-                        appViewModel.setMediaSeleccionado(mediaUri, "image");
-                    });
-    private final ActivityResultLauncher<Uri> camaraVideos =
-            registerForActivityResult(new ActivityResultContracts.TakeVideo(), isSuccess
-                    -> {
-                appViewModel.setMediaSeleccionado(mediaUri, "video");
+            registerForActivityResult(new ActivityResultContracts.GetContent(),
+                    uri -> { appViewModel.setMediaSeleccionado(uri, mediaTipo);
             });
     private final ActivityResultLauncher<Intent> grabadoraAudio =
             registerForActivityResult(new

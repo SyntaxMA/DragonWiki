@@ -215,5 +215,15 @@
         android:name="com.example.dragonwiki.NewPostFragment"
         android:label="fragment_new_post"
         tools:layout="@layout/fragment_new_post" />
+    <fragment
+        android:id="@+id/newCardFragment"
+        android:name="com.example.dragonwiki.NewCardFragment"
+        android:label="fragment_new_card"
+        tools:layout="@layout/fragment_new_card" />
+    <fragment
+        android:id="@+id/carta_fragment"
+        android:name="com.example.dragonwiki.Carta_fragment"
+        android:label="fragment_carta"
+        tools:layout="@layout/fragment_carta" />
 
 </navigation>

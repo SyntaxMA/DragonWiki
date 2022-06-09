@@ -206,11 +206,7 @@ public class Online_fragment extends Fragment {
             // Miniatura de media
             if (post.mediaUrl != null) {
                 holder.mediaImageView.setVisibility(View.VISIBLE);
-                if ("audio".equals(post.mediaType)) {
-                    Glide.with(requireView()).load(R.drawable.audio).centerCrop().into(holder.mediaImageView);
-                } else {
-                    Glide.with(requireView()).load(post.mediaUrl).centerCrop().into(holder.mediaImageView);
-                }
+                Glide.with(requireView()).load(post.mediaUrl).centerCrop().into(holder.mediaImageView);
                 holder.mediaImageView.setOnClickListener(view -> {
                     appViewModel.postSeleccionado.setValue(post);
                     navController.navigate(R.id.media_fragment);
