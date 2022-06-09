@@ -225,5 +225,10 @@
         android:name="com.example.dragonwiki.Carta_fragment"
         android:label="fragment_carta"
         tools:layout="@layout/fragment_carta" />
+    <fragment
+        android:id="@+id/noticia_fragment"
+        android:name="com.example.dragonwiki.Noticia_fragment"
+        android:label="fragment_noticia"
+        tools:layout="@layout/fragment_noticia" />
 
 </navigation>
